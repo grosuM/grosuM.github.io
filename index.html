@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jan Kowalski — projektant UI • Front-end</title>
+  <meta name="description" content="Jan Kowalski — projektant UI/Front-end. Tworzę proste, estetyczne strony oraz interfejsy. Kontakt: email@example.com" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <!-- Open Graph (opcjonalne) -->
+  <meta property="og:title" content="Jan Kowalski — projektant UI" />
+  <meta property="og:description" content="Proste i czytelne wizytówki/portfolio." />
+  <meta property="og:type" content="website" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <img src="/img/avatar.jpg" alt="Jan Kowalski" class="avatar">
+      <h1>Jan Kowalski</h1>
+      <p class="subtitle">Projektant UI & Front-end developer</p>
+      <nav class="nav">
+        <a href="#about">O mnie</a>
+        <a href="#work">Wybrane prace</a>
+        <a href="#contact">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about" class="card">
+      <h2>O mnie</h2>
+      <p>Krótki opis: co robisz, technologie, doświadczenie.</p>
+    </section>
+
+    <section id="work" class="card">
+      <h2>Wybrane prace</h2>
+      <ul class="projects">
+        <li><strong>Nazwa projektu</strong> — krótki opis. <a href="#">Demo</a></li>
+        <!-- dodaj więcej -->
+      </ul>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Kontakt</h2>
+      <p>Email: <a href="mailto:email@example.com">email@example.com</a></p>
+      <p>LinkedIn / GitHub: <a href="https://github.com/USERNAME">github.com/USERNAME</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> Jan Kowalski — Wszystkie prawa zastrzeżone.</small>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
