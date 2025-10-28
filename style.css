@@ -57,6 +57,7 @@ header {
 
 .dropdown {
   position: relative;
+  outline: none;
 }
 
 .dropbtn {
@@ -100,6 +101,7 @@ header {
   background-color: #f0f0f0;
 }
 
+/* FIX: Dropdown stays open when focused */
 .dropdown:focus-within .dropdown-content,
 .dropdown:hover .dropdown-content {
   display: block;
@@ -165,3 +167,4 @@ footer {
     margin-bottom: 10px;
   }
 }
+
