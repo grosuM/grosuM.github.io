@@ -1,60 +1,58 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Mikołaj Gros — Pionier wśród spedytorów • Najlepsza firma </title>
-  <meta name="description" content="JMikołaj Gros — spedytor. Zorganizuje transport dla wszystkiego. Kontakt: email@example.com" />
-  <link rel="icon" href="/favicon.ico" />
-  <link rel="stylesheet" href="/css/style.css" />
-  <!-- Open Graph (opcjonalne) -->
-  <meta property="og:title" content="Mikołaj Gros" />
-  <meta property="og:description" content="Prosta i czytelna współpraca." />
-  <meta property="og:type" content="website" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Strona Wizytówka</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <img src="/img/avatar.jpg" alt="Jan Kowalski" class="avatar">
-      <h1>Mikołaj Gris</h1>
-      <p class="subtitle">Pionier wśród spedytorów</p>
-      <nav class="nav">
-        <a href="#about">O mnie</a>
-        <a href="#work">Oferta</a>
-        <a href="#contact">Kontakt</a>
-      </nav>
-    </div>
+  <header>
+    <div class="logo"><img src="logo.png" alt="Logo" /></div>
+    <nav class="main-nav">
+      <a href="index.html">Strona główna</a>
+      <a href="o-nas.html">O nas</a>
+      <a href="oferta.html">Oferta</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
   </header>
 
-  <main class="container">
-    <section id="about" class="card">
-      <h2>O mnie</h2>
-      <p>Krótki opis: co robisz, technologie, doświadczenie.</p>
-    </section>
+  <div class="sticky-bar">
+    <div class="dropdown">
+      <button class="dropbtn">Nagłówek 1</button>
+      <div class="dropdown-content">
+        <a href="#">Opcja 1</a>
+        <a href="#">Opcja 2</a>
+        <a href="#">Opcja 3</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Nagłówek 2</button>
+      <div class="dropdown-content">
+        <a href="#">Opcja 1</a>
+        <a href="#">Opcja 2</a>
+        <a href="#">Opcja 3</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Nagłówek 3</button>
+      <div class="dropdown-content">
+        <a href="#">Opcja 1</a>
+        <a href="#">Opcja 2</a>
+        <a href="#">Opcja 3</a>
+      </div>
+    </div>
+  </div>
 
-    <section id="work" class="card">
-      <h2>Oferta</h2>
-      <ul class="projects">
-        <li><strong>Ofra 1</strong> — krótki opis. <a href="#">Demo</a></li>
-        <!-- dodaj więcej -->
-      </ul>
-    </section>
-
-    <section id="contact" class="card">
-      <h2>Kontakt</h2>
-      <p>Email: <a href="mailto:email@example.com">email@example.com</a></p>
-      <p>LinkedIn / GitHub: <a href="https://github.com/USERNAME">github.com/USERNAME</a></p>
+  <main>
+    <section class="news">
+      <h2>Aktualności</h2>
+      <p>Tu możesz dodać najnowsze informacje, wpisy lub ogłoszenia.</p>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <small>© <span id="year"></span> Jan Kowalski — Wszystkie prawa zastrzeżone.</small>
-    </div>
+  <footer>
+    <p>&copy; 2025 Twoja Firma. Wszelkie prawa zastrzeżone.</p>
   </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
