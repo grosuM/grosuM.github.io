@@ -1,35 +1,57 @@
-body {
+/* Reset i podstawy */
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #004080;
-  padding: 10px 20px;
-  color: white;
+  background: linear-gradient(to right, #0052cc, #007fff);
+  padding: 15px 30px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .logo img {
-  height: 40px;
+  height: 50px;
 }
 
 .main-nav a {
-  color: white;
-  margin-left: 20px;
+  color: #fff;
   text-decoration: none;
+  margin-left: 25px;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
+.main-nav a:hover {
+  color: #ffdd57;
+}
+
+/* Sticky bar z dropdownami */
 .sticky-bar {
-  position: sticky;
-  top: 0;
-  background-color: #e0e0e0;
-  padding: 10px;
   display: flex;
-  gap: 20px;
-  z-index: 1000;
+  justify-content: center;
+  gap: 30px;
+  background-color: #ffffff;
+  padding: 10px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 70px;
+  z-index: 999;
 }
 
 .dropdown {
@@ -37,39 +59,98 @@ header {
 }
 
 .dropbtn {
-  background-color: #e0e0e0;
+  background: none;
   border: none;
-  cursor: pointer;
   font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  color: #0052cc;
+  transition: color 0.3s ease;
+}
+
+.dropbtn:hover {
+  color: #007fff;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: white;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-  min-width: 160px;
-  z-index: 1;
+  background-color: #ffffff;
+  min-width: 180px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  border-radius: 6px;
+  overflow: hidden;
+  top: 35px;
+  left: 0;
+  z-index: 1000;
 }
 
 .dropdown-content a {
-  padding: 10px;
+  padding: 12px 16px;
   display: block;
   text-decoration: none;
-  color: black;
+  color: #333;
+  transition: background 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #f0f0f0;
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-.news {
-  padding: 20px;
+/* Sekcja główna */
+main {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
 }
 
+section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #0052cc;
+}
+
+section p {
+  font-size: 18px;
+  color: #555;
+}
+
+/* Footer */
 footer {
-  background-color: #004080;
+  background-color: #0052cc;
   color: white;
   text-align: center;
-  padding: 10px;
+  padding: 20px;
+  margin-top: 40px;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.05);
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .main-nav {
+    margin-top: 10px;
+  }
+
+  .main-nav a {
+    display: inline-block;
+    margin: 10px 10px 0 0;
+  }
+
+  .sticky-bar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dropdown {
+    margin-bottom: 10px;
+  }
 }
