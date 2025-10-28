@@ -1,64 +1,224 @@
-<!DOCTYPE html>
-<html lang="pl">
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Strona główna</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0066FF" />
+  <title>Starter Transport Company — Reliable Freight & Local Delivery</title>
+  <meta name="description" content="Professional transport services for startups: freight, local delivery, logistics planning. Transparent pricing, reliable drivers and easy onboarding." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>🚚</text></svg>">
 </head>
 <body>
-  <header>
-    <div class="logo"><img src="logo.png" alt="Logo" /></div>
-    <nav class="main-nav">
-      <a href="index.html">Strona główna</a>
-      <a href="o-nas.html">O nas</a>
-      <a href="oferta.html">Oferta</a>
-      <a href="kontakt.html">Kontakt</a>
-    </nav>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="logo" href="/" aria-label="Starter Transport Co. home">
+        <img src="assets/logo.svg" alt="Starter Transport Co. logo" width="48" height="48" />
+      </a>
+
+      <nav class="main-nav" aria-label="Primary navigation">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">
+          <span class="sr-only">Toggle navigation</span>
+          <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </button>
+        <ul id="nav-list" class="nav-list">
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" class="btn btn--ghost">Get Quote</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <div class="sticky-bar">
-    <div class="dropdown" tabindex="0">
-      <button class="dropbtn">Nagłówek 1</button>
-      <div class="dropdown-content">
-        <a href="naglowek1-opcja1.html">Opcja 1</a>
-        <a href="naglowek1-opcja2.html">Opcja 2</a>
-        <a href="naglowek1-opcja3.html">Opcja 3</a>
+  <div class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <h1 class="hero-title">Start your transport business with confidence.</h1>
+        <p class="hero-sub">Affordable, reliable freight and local delivery solutions built for new transport companies — simple onboarding, transparent pricing, and tools to scale.</p>
+        <div class="hero-cta">
+          <a class="btn" href="contact.html">Get a free quote</a>
+          <a class="btn btn--muted" href="services.html">See services</a>
+        </div>
+        <ul class="trust-list" aria-hidden="true">
+          <li><strong>24/7 Support</strong></li>
+          <li><strong>Transparent Pricing</strong></li>
+          <li><strong>Trusted Drivers</strong></li>
+        </ul>
       </div>
-    </div>
-    <div class="dropdown" tabindex="0">
-      <button class="dropbtn">Nagłówek 2</button>
-      <div class="dropdown-content">
-        <a href="naglowek2-opcja1.html">Opcja 1</a>
-        <a href="naglowek2-opcja2.html">Opcja 2</a>
-        <a href="naglowek2-opcja3.html">Opcja 3</a>
-      </div>
-    </div>
-    <div class="dropdown" tabindex="0">
-      <button class="dropbtn">Nagłówek 3</button>
-      <div class="dropdown-content">
-        <a href="naglowek3-opcja1.html">Opcja 1</a>
-        <a href="naglowek3-opcja2.html">Opcja 2</a>
-        <a href="naglowek3-opcja3.html">Opcja 3</a>
+
+      <div class="hero-visual" aria-hidden="true">
+        <img src="assets/hero-truck.svg" alt="" class="img-responsive" />
       </div>
     </div>
   </div>
 
-  <main>
-    <section class="news">
-      <h2>Aktualności</h2>
-      <p>Tu znajdą się najnowsze informacje, ogłoszenia lub wpisy blogowe.</p>
+  <main id="main" class="container" role="main">
+    <section id="services" class="section section--cards">
+      <h2 class="section-title">Services tailored to new transport companies</h2>
+      <p class="section-lead">Everything you need to move goods responsibly, on time and with predictable costs.</p>
+
+      <div class="grid grid--3">
+        <article class="card" aria-labelledby="s1">
+          <div class="card-icon" aria-hidden="true">
+            <img src="assets/ico-freight.svg" alt="" width="40" height="40" />
+          </div>
+          <h3 id="s1">Freight & Regional Haulage</h3>
+          <p>Book capacity for pallets and partial loads with transport-ready documentation and easy tracking.</p>
+          <a class="btn btn--muted" href="services.html#freight">Learn more</a>
+        </article>
+
+        <article class="card" aria-labelledby="s2">
+          <div class="card-icon" aria-hidden="true">
+            <img src="assets/ico-local.svg" alt="" width="40" height="40" />
+          </div>
+          <h3 id="s2">Local & Last-mile</h3>
+          <p>Fast urban deliveries, scheduled routes and white-glove options for fragile or high-priority items.</p>
+          <a class="btn btn--muted" href="services.html#local">Learn more</a>
+        </article>
+
+        <article class="card" aria-labelledby="s3">
+          <div class="card-icon" aria-hidden="true">
+            <img src="assets/ico-plan.svg" alt="" width="40" height="40" />
+          </div>
+          <h3 id="s3">Logistics Planning</h3>
+          <p>Route optimization, cost modeling, and on-call consultants to help you scale operations efficiently.</p>
+          <a class="btn btn--muted" href="services.html#planning">Learn more</a>
+        </article>
+      </div>
     </section>
 
-    <section class="cta">
-      <h3>Gotowy na współpracę?</h3>
-      <p>Skontaktuj się z nami i zamów usługę już teraz!</p>
-      <a href="kontakt.html" class="order-button">Zamów teraz</a>
+    <section class="section section--stats" aria-label="Company highlights">
+      <div class="stats">
+        <div class="stat">
+          <p class="stat-value">99.8%</p>
+          <p class="stat-label">On-time deliveries</p>
+        </div>
+        <div class="stat">
+          <p class="stat-value">24/7</p>
+          <p class="stat-label">Support</p>
+        </div>
+        <div class="stat">
+          <p class="stat-value">100+</p>
+          <p class="stat-label">Trusted drivers</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="plans" class="section section--pricing">
+      <h2 class="section-title">Starter plans</h2>
+      <p class="section-lead">Simple, transparent plans for new transport businesses.</p>
+
+      <div class="grid grid--3">
+        <div class="plan card card--accent">
+          <h3>Starter</h3>
+          <p class="plan-price"><span class="currency">$</span>99 <span class="plan-period">/mo</span></p>
+          <ul class="list">
+            <li>Onboarding help</li>
+            <li>3 shipments / month</li>
+            <li>Email support</li>
+          </ul>
+          <a class="btn btn--block" href="contact.html">Choose</a>
+        </div>
+
+        <div class="plan card">
+          <h3>Growth</h3>
+          <p class="plan-price"><span class="currency">$</span>299 <span class="plan-period">/mo</span></p>
+          <ul class="list">
+            <li>Priority rates</li>
+            <li>Dedicated account manager</li>
+            <li>Route optimization credits</li>
+          </ul>
+          <a class="btn btn--block" href="contact.html">Get started</a>
+        </div>
+
+        <div class="plan card">
+          <h3>Custom</h3>
+          <p class="plan-price">Contact</p>
+          <ul class="list">
+            <li>Custom SLAs</li>
+            <li>Fleet integration</li>
+            <li>On-site training</li>
+          </ul>
+          <a class="btn btn--block btn--muted" href="contact.html">Talk to sales</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section section--dark">
+      <div class="grid grid--2-vcenter">
+        <div>
+          <h2 class="section-title">Built for new transport operators</h2>
+          <p>We focus on transparency, training and tools so you can onboard drivers, manage routes and bill customers without surprises.</p>
+          <ul class="feature-list">
+            <li>Driver verification & insurance checks</li>
+            <li>Templates for invoices, manifests and compliance</li>
+            <li>Integrated basic reporting dashboard</li>
+          </ul>
+          <a class="btn" href="about.html">Read more</a>
+        </div>
+        <div aria-hidden="true">
+          <img src="assets/team.svg" alt="" class="feature-img img-responsive" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--testimonials" aria-label="What customers say">
+      <h2 class="section-title">Trusted by operators</h2>
+      <div class="carousel">
+        <blockquote class="quote card">
+          <p>"Excellent onboarding, clear pricing and our deliveries are consistently on time since switching."</p>
+          <cite>— A. Rodriguez, Small Freight Co.</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <section id="contact-preview" class="section section--form">
+      <h2 class="section-title">Get a free quote</h2>
+      <p class="section-lead">Tell us your needs and we'll follow up within one business day.</p>
+
+      <a class="btn" href="contact.html">Go to contact page</a>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Twoja Firma</p>
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a class="logo" href="/" aria-label="Starter Transport Co. home">
+          <img src="assets/logo.svg" alt="Starter Transport Co. logo" width="32" height="32" />
+        </a>
+        <p>Starter Transport Co. · Helping new operators deliver on time.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="footer-meta">
+        <p>&copy; <span id="year"></span> Starter Transport Co. All rights reserved.</p>
+      </div>
+    </div>
   </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const navToggle = document.querySelector('.nav-toggle');
+    const navList = document.getElementById('nav-list');
+    navToggle && navToggle.addEventListener('click', function() {
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', String(!expanded));
+      navList.classList.toggle('nav-list--open');
+    });
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('reduced-motion');
+    }
+  </script>
 </body>
 </html>
