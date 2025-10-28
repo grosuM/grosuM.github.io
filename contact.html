@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Starter Transport Co.</title>
+  <meta name="description" content="Contact Starter Transport Co. for quotes, sales and support." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="logo" href="/" aria-label="Starter Transport Co. home">
+        <img src="assets/logo.svg" alt="Starter Transport Co. logo" width="48" height="48" />
+      </a>
+
+      <nav class="main-nav" aria-label="Primary navigation">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">
+          <span class="sr-only">Toggle navigation</span>
+          <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </button>
+        <ul id="nav-list" class="nav-list">
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" class="btn btn--ghost">Get Quote</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container" role="main">
+    <section class="section section--form">
+      <h1 class="section-title">Contact us</h1>
+      <p class="section-lead">Fill the form or use the details below — we typically reply within one business day.</p>
+
+      <div class="grid grid--2">
+        <form class="contact-form" action="#" method="post" novalidate>
+          <div class="grid grid--2">
+            <label class="form-group">
+              <span class="label">Your name</span>
+              <input type="text" name="name" required placeholder="Jane Doe" />
+            </label>
+            <label class="form-group">
+              <span class="label">Email</span>
+              <input type="email" name="email" required placeholder="you@example.com" />
+            </label>
+          </div>
+
+          <div class="grid grid--2">
+            <label class="form-group">
+              <span class="label">Phone</span>
+              <input type="tel" name="phone" placeholder="+1 555 555 5555" />
+            </label>
+            <label class="form-group">
+              <span class="label">Service interest</span>
+              <select name="service" required>
+                <option value="">Choose</option>
+                <option>Freight & Regional Haulage</option>
+                <option>Local & Last-mile</option>
+                <option>Logistics Planning</option>
+              </select>
+            </label>
+          </div>
+
+          <label class="form-group">
+            <span class="label">Message</span>
+            <textarea name="message" rows="6" placeholder="Tell us about your routes, volumes, and timeline"></textarea>
+          </label>
+
+          <div class="form-actions">
+            <button type="submit" class="btn">Request quote</button>
+            <a class="btn btn--muted" href="tel:+15555555555">Call us</a>
+          </div>
+        </form>
+
+        <aside aria-labelledby="contact-info" class="card">
+          <h2 id="contact-info">Contact details</h2>
+          <p><strong>Email:</strong> <a href="mailto:support@example.com">support@example.com</a></p>
+          <p><strong>Phone:</strong> <a href="tel:+15555555555">+1 555 555 5555</a></p>
+          <p><strong>Address:</strong> 123 Logistics Ave, City, State</p>
+
+          <h3>Our service area</h3>
+          <img src="assets/map.svg" alt="Service area map illustration" class="img-responsive" />
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/logo.svg" alt="" width="32" height="32" />
+        <p>Starter Transport Co. · Helping new operators deliver on time.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="footer-meta">
+        <p>&copy; <span id="year"></span> Starter Transport Co. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const navToggle = document.querySelector('.nav-toggle');
+    const navList = document.getElementById('nav-list');
+    navToggle && navToggle.addEventListener('click', function() {
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', String(!expanded));
+      navList.classList.toggle('nav-list--open');
+    });
+  </script>
+</body>
+</html>
