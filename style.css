@@ -101,7 +101,7 @@ header {
   background-color: #f0f0f0;
 }
 
-/* FIX: Dropdown stays open when focused */
+/* FIX: Dropdown stays open when focused or hovered */
 .dropdown:focus-within .dropdown-content,
 .dropdown:hover .dropdown-content {
   display: block;
@@ -124,6 +124,45 @@ section h2 {
 section p {
   font-size: 18px;
   color: #555;
+}
+
+/* CTA section */
+.cta {
+  text-align: center;
+  background: linear-gradient(90deg, #00ccff, #0066ff);
+  color: white;
+  padding: 50px 20px;
+  margin-top: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.cta h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.cta p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.order-button {
+  display: inline-block;
+  background-color: #ffeb3b;
+  color: #333;
+  font-weight: bold;
+  padding: 14px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.order-button:hover {
+  background-color: #fff176;
+  transform: scale(1.05);
 }
 
 /* Footer */
@@ -167,4 +206,3 @@ footer {
     margin-bottom: 10px;
   }
 }
-
