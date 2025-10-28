@@ -1,4 +1,4 @@
-/* Reset i podstawy */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -6,8 +6,8 @@
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f9f9f9;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background-color: #f5f7fa;
   color: #333;
   line-height: 1.6;
 }
@@ -17,9 +17,9 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(to right, #0052cc, #007fff);
-  padding: 15px 30px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background: linear-gradient(90deg, #0066ff, #00ccff);
+  padding: 20px 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -32,25 +32,26 @@ header {
 .main-nav a {
   color: #fff;
   text-decoration: none;
-  margin-left: 25px;
-  font-weight: 500;
+  margin-left: 30px;
+  font-weight: 600;
+  font-size: 16px;
   transition: color 0.3s ease;
 }
 
 .main-nav a:hover {
-  color: #ffdd57;
+  color: #ffeb3b;
 }
 
-/* Sticky bar z dropdownami */
+/* Sticky bar */
 .sticky-bar {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 40px;
   background-color: #ffffff;
-  padding: 10px 0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  padding: 15px 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   position: sticky;
-  top: 70px;
+  top: 80px;
   z-index: 999;
 }
 
@@ -61,35 +62,37 @@ header {
 .dropbtn {
   background: none;
   border: none;
-  font-weight: bold;
+  font-weight: 600;
   font-size: 16px;
   cursor: pointer;
-  color: #0052cc;
+  color: #0066ff;
+  padding: 10px 20px;
   transition: color 0.3s ease;
 }
 
 .dropbtn:hover {
-  color: #007fff;
+  color: #00ccff;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: #ffffff;
-  min-width: 180px;
+  min-width: 200px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-  border-radius: 6px;
+  border-radius: 8px;
   overflow: hidden;
-  top: 35px;
+  top: 50px;
   left: 0;
   z-index: 1000;
 }
 
 .dropdown-content a {
-  padding: 12px 16px;
+  padding: 14px 20px;
   display: block;
   text-decoration: none;
   color: #333;
+  font-weight: 500;
   transition: background 0.3s ease;
 }
 
@@ -97,21 +100,23 @@ header {
   background-color: #f0f0f0;
 }
 
+.dropdown:focus-within .dropdown-content,
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-/* Sekcja główna */
+/* Main content */
 main {
-  padding: 40px 20px;
+  padding: 60px 20px;
   max-width: 1000px;
   margin: auto;
+  animation: fadeIn 0.6s ease-in-out;
 }
 
 section h2 {
-  font-size: 28px;
+  font-size: 32px;
   margin-bottom: 20px;
-  color: #0052cc;
+  color: #0066ff;
 }
 
 section p {
@@ -121,12 +126,18 @@ section p {
 
 /* Footer */
 footer {
-  background-color: #0052cc;
+  background-color: #0066ff;
   color: white;
   text-align: center;
-  padding: 20px;
-  margin-top: 40px;
+  padding: 25px;
+  margin-top: 60px;
   box-shadow: 0 -2px 6px rgba(0,0,0,0.05);
+}
+
+/* Animacje */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Responsywność */
