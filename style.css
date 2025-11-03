@@ -116,8 +116,10 @@ p{ margin-bottom: var(--space-sm); color:var(--muted); }
 }
 
 /* Logo */
-.logo{ display:flex; align-items:center; gap:8px; text-decoration:none; color:inherit; }
+.logo{ display:flex; align-items:center; gap:12px; text-decoration:none; color:inherit; }
+.logo img { display:block; }
 .logo svg { display:block; }
+.brand-text { font-weight:700; font-size:1.1rem; white-space:nowrap; }
 
 /* Nav */
 .main-nav{ display:flex; align-items:center; gap:12px; }
@@ -137,6 +139,40 @@ p{ margin-bottom: var(--space-sm); color:var(--muted); }
 }
 .nav-list a:hover,
 .nav-list a:focus { background: rgba(255,255,255,0.08); outline:none; }
+.nav-list a.active { background: rgba(255,255,255,0.15); }
+
+/* Special styling for contact button */
+.btn--contact {
+  background: white !important;
+  color: var(--brand-primary) !important;
+  font-weight: 700;
+  padding: 10px 20px !important;
+  border-radius: 999px !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform var(--transition-fast), box-shadow var(--transition);
+}
+.btn--contact:hover {
+  background: rgba(255,255,255,0.95) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+/* Language switcher button */
+.btn--lang {
+  background: rgba(255,255,255,0.12);
+  color: white;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.2);
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition-fast);
+  font-size: 0.9rem;
+}
+.btn--lang:hover {
+  background: rgba(255,255,255,0.18);
+  transform: translateY(-1px);
+}
 
 .nav-toggle{
   display:none;

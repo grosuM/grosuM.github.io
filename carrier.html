@@ -1,12 +1,13 @@
 <!doctype html>
-<html lang="en">
+<html lang="pl">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Contact — Starter Transport Co.</title>
-  <meta name="description" content="Contact Starter Transport Co. for quotes, sales and support." />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <title>Dla przewoźnika — Starter Transport</title>
+  <meta name="description" content="Oferta dla przewoźników - dołącz do naszej sieci transportowej." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>🚚</text></svg>">
 </head>
 <body>
   <a class="skip-link" href="#main" data-i18n="skipLink">Przejdź do treści</a>
@@ -27,8 +28,8 @@
         <ul id="nav-list" class="nav-list">
           <li><a href="/about.html" data-i18n="navAbout">O firmie</a></li>
           <li><a href="/services.html" data-i18n="navServices">Usługi</a></li>
-          <li><a href="/carrier.html" data-i18n="navCarrier">Dla przewoźnika</a></li>
-          <li><a class="btn btn--contact active" href="/contact.html" data-i18n="navContact">Kontakt</a></li>
+          <li><a href="/carrier.html" class="active" data-i18n="navCarrier">Dla przewoźnika</a></li>
+          <li><a class="btn btn--contact" href="/contact.html" data-i18n="navContact">Kontakt</a></li>
           <li class="lang-switch">
             <button id="lang-toggle" aria-label="Zmień język" class="btn btn--lang">🇵🇱 PL / 🇬🇧 EN</button>
           </li>
@@ -38,59 +39,34 @@
   </header>
 
   <main id="main" class="container" role="main">
-    <section class="section section--form">
-      <h1 class="section-title">Contact us</h1>
-      <p class="section-lead">Fill the form or use the details below — we typically reply within one business day.</p>
+    <section class="section">
+      <h1>Dla przewoźnika</h1>
+      <p class="section-lead">Dołącz do naszej sieci transportowej i rozwijaj swój biznes</p>
 
       <div class="grid grid--2">
-        <form class="contact-form" action="#" method="post" novalidate>
-          <div class="grid grid--2">
-            <label class="form-group">
-              <span class="label">Your name</span>
-              <input type="text" name="name" required placeholder="Jane Doe" />
-            </label>
-            <label class="form-group">
-              <span class="label">Email</span>
-              <input type="email" name="email" required placeholder="you@example.com" />
-            </label>
-          </div>
+        <article class="card">
+          <h2>Korzyści dla przewoźników</h2>
+          <ul class="list">
+            <li>Stały dostęp do zleceń transportowych</li>
+            <li>Konkurencyjne stawki i terminowe płatności</li>
+            <li>Wsparcie logistyczne i administracyjne</li>
+            <li>Szkolenia i rozwój kompetencji</li>
+          </ul>
+        </article>
 
-          <div class="grid grid--2">
-            <label class="form-group">
-              <span class="label">Phone</span>
-              <input type="tel" name="phone" placeholder="+1 555 555 5555" />
-            </label>
-            <label class="form-group">
-              <span class="label">Service interest</span>
-              <select name="service" required>
-                <option value="">Choose</option>
-                <option>Freight & Regional Haulage</option>
-                <option>Local & Last-mile</option>
-                <option>Logistics Planning</option>
-              </select>
-            </label>
-          </div>
+        <article class="card">
+          <h2>Wymagania</h2>
+          <ul class="list">
+            <li>Aktualne ubezpieczenie OCP i AC</li>
+            <li>Sprawny pojazd z aktualnym przeglądem</li>
+            <li>Doświadczenie w transporcie krajowym/międzynarodowym</li>
+            <li>Rzetelność i terminowość</li>
+          </ul>
+        </article>
+      </div>
 
-          <label class="form-group">
-            <span class="label">Message</span>
-            <textarea name="message" rows="6" placeholder="Tell us about your routes, volumes, and timeline"></textarea>
-          </label>
-
-          <div class="form-actions">
-            <button type="submit" class="btn">Request quote</button>
-            <a class="btn btn--muted" href="tel:+15555555555">Call us</a>
-          </div>
-        </form>
-
-        <aside aria-labelledby="contact-info" class="card">
-          <h2 id="contact-info">Contact details</h2>
-          <p><strong>Email:</strong> <a href="mailto:support@example.com">support@example.com</a></p>
-          <p><strong>Phone:</strong> <a href="tel:+15555555555">+1 555 555 5555</a></p>
-          <p><strong>Address:</strong> 123 Logistics Ave, City, State</p>
-
-          <h3>Our service area</h3>
-          <img src="assets/map.svg" alt="Service area map illustration" class="img-responsive" />
-        </aside>
+      <div class="section" style="text-align: center; margin-top: 2rem;">
+        <a class="btn" href="/contact.html">Skontaktuj się z nami</a>
       </div>
     </section>
   </main>
@@ -119,6 +95,7 @@
   <script src="/assets/lang-switch.js"></script>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
     const navToggle = document.querySelector('.nav-toggle');
     const navList = document.getElementById('nav-list');
     navToggle && navToggle.addEventListener('click', function() {
@@ -126,6 +103,10 @@
       this.setAttribute('aria-expanded', String(!expanded));
       navList.classList.toggle('nav-list--open');
     });
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('reduced-motion');
+    }
   </script>
 </body>
 </html>
