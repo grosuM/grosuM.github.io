@@ -83,13 +83,15 @@
     });
   }
 
+  // Flag emoji mapping at module level for better performance
+  const flags = {
+    pl: '🇵🇱',
+    en: '🇬🇧'
+  };
+
   function updateLangButton() {
     const langBtn = document.getElementById('lang-toggle');
     if (langBtn) {
-      const flags = {
-        pl: '🇵🇱',
-        en: '🇬🇧'
-      };
       const otherLang = currentLang === 'pl' ? 'en' : 'pl';
       langBtn.innerHTML = `${flags[currentLang]} ${currentLang.toUpperCase()} / ${flags[otherLang]} ${otherLang.toUpperCase()}`;
     }
