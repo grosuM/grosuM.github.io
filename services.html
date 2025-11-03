@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="pl">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Services — Starter Transport Co.</title>
-  <meta name="description" content="Services: Freight, Local Delivery, Logistics Planning." />
+  <title>Usługi — Starter Transport</title>
+  <meta name="description" content="Nasze usługi: Transport i fracht, Dostawy lokalne, Planowanie logistyki." />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -25,7 +25,7 @@
         </button>
 
         <ul id="nav-list" class="nav-list">
-          <li><a href="/about.html" data-i18n="navAbout">O firmie</a></li>
+          <li><a href="/about.html" data-i18n="navAbout">O nas</a></li>
           <li><a href="/services.html" class="active" data-i18n="navServices">Usługi</a></li>
           <li><a href="/carrier.html" data-i18n="navCarrier">Dla przewoźnika</a></li>
           <li><a class="btn btn--contact" href="/contact.html" data-i18n="navContact">Kontakt</a></li>
@@ -39,38 +39,51 @@
 
   <main id="main" class="container" role="main">
     <section class="section">
-      <h1 class="section-title">Services</h1>
-      <p class="section-lead">Explore the services we offer to help you start and scale your transport operations.</p>
+      <h1 class="section-title" data-i18n="servicesTitle">Nasze usługi</h1>
+      <p class="section-lead" data-i18n="servicesLead">Odkryj pełen zakres naszych usług transportowych</p>
 
-      <article id="freight" class="card">
-        <h2>Freight & Regional Haulage</h2>
-        <p>Comprehensive regional freight: palletized shipments, documentation support and tracking. Ideal for scheduled and ad-hoc loads.</p>
-        <ul class="list">
-          <li>Competitive regional rates</li>
-          <li>Manifest & customs support</li>
-          <li>Basic tracking dashboard</li>
-        </ul>
-      </article>
+      <div class="services-grid">
+        <article id="freight" class="card card--service">
+          <div class="card-icon">
+            <img src="assets/ico-freight.svg" alt="" aria-hidden="true" />
+          </div>
+          <h2 data-i18n="serviceFreightTitle">Transport i fracht</h2>
+          <p data-i18n="serviceFreightDesc">Kompleksowy transport regionalny i międzynarodowy: przesyłki paletowe, wsparcie dokumentacyjne i śledzenie. Idealne rozwiązanie dla regularnych i jednorazowych ładunków.</p>
+          <ul class="list">
+            <li data-i18n="serviceFreightList1">Konkurencyjne stawki regionalne i międzynarodowe</li>
+            <li data-i18n="serviceFreightList2">Wsparcie w zakresie dokumentacji i celów</li>
+            <li data-i18n="serviceFreightList3">System śledzenia przesyłek online</li>
+          </ul>
+        </article>
 
-      <article id="local" class="card">
-        <h2>Local & Last-mile</h2>
-        <p>Urban and same-day delivery options, national pickup-to-door services, and white-glove handling for fragile goods.</p>
-        <ul class="list">
-          <li>Route batching and scheduling</li>
-          <li>Fragile handling and signature on delivery</li>
-        </ul>
-      </article>
+        <article id="local" class="card card--service">
+          <div class="card-icon">
+            <img src="assets/ico-local.svg" alt="" aria-hidden="true" />
+          </div>
+          <h2 data-i18n="serviceLocalTitle">Dostawy lokalne i ostatniej mili</h2>
+          <p data-i18n="serviceLocalDesc">Dostawy miejskie i tego samego dnia, krajowe usługi door-to-door oraz delikatna obsługa towarów wrażliwych.</p>
+          <ul class="list">
+            <li data-i18n="serviceLocalList1">Planowanie tras i harmonogramów</li>
+            <li data-i18n="serviceLocalList2">Obsługa towarów delikatnych z potwierdzeniem odbioru</li>
+          </ul>
+        </article>
 
-      <article id="planning" class="card">
-        <h2>Logistics Planning</h2>
-        <p>Route optimization, cost modeling, and consulting to help you scale safely and profitably.</p>
-        <ul class="list">
-          <li>Route optimization credits</li>
-          <li>Driver onboarding & training modules</li>
-        </ul>
-      </article>
+        <article id="planning" class="card card--service">
+          <div class="card-icon">
+            <img src="assets/ico-plan.svg" alt="" aria-hidden="true" />
+          </div>
+          <h2 data-i18n="servicePlanningTitle">Planowanie logistyki</h2>
+          <p data-i18n="servicePlanningDesc">Optymalizacja tras, modelowanie kosztów i doradztwo, aby pomóc Ci rozwijać działalność bezpiecznie i rentownie.</p>
+          <ul class="list">
+            <li data-i18n="servicePlanningList1">Optymalizacja tras i kosztów</li>
+            <li data-i18n="servicePlanningList2">Szkolenia kierowców i moduły wdrożeniowe</li>
+          </ul>
+        </article>
+      </div>
 
-      <a class="btn" href="contact.html">Get a quote</a>
+      <div style="text-align: center; margin-top: 2rem;">
+        <a class="btn" href="contact.html" data-i18n="ctaGetQuote">Zapytaj o wycenę</a>
+      </div>
     </section>
   </main>
 
@@ -85,7 +98,7 @@
 
       <nav class="footer-nav" aria-label="Footer">
         <a href="/services.html" data-i18n="footerServices">Usługi</a>
-        <a href="/about.html" data-i18n="footerAbout">O firmie</a>
+        <a href="/about.html" data-i18n="footerAbout">O nas</a>
         <a href="/contact.html" data-i18n="footerContact">Kontakt</a>
       </nav>
 

@@ -25,7 +25,7 @@
         </button>
 
         <ul id="nav-list" class="nav-list">
-          <li><a href="/about.html" class="active" data-i18n="navAbout">O firmie</a></li>
+          <li><a href="/about.html" class="active" data-i18n="navAbout">O nas</a></li>
           <li><a href="/services.html" data-i18n="navServices">Usługi</a></li>
           <li><a href="/carrier.html" data-i18n="navCarrier">Dla przewoźnika</a></li>
           <li><a class="btn btn--contact" href="/contact.html" data-i18n="navContact">Kontakt</a></li>
@@ -38,8 +38,86 @@
   </header>
 
   <main id="main">
-    <h1>O firmie</h1>
-    <p>Witaj w Starter Transport! Nasza misja to dostarczenie najlepszego transportu dla Twoich potrzeb.</p>
+    <!-- Hero Section -->
+    <div class="page-hero">
+      <div class="container">
+        <h1 data-i18n="aboutHeroTitle">Twój partner w transporcie</h1>
+        <p class="page-hero-desc" data-i18n="aboutHeroDesc">Zapewniamy kompleksowe usługi transportowe z pasją i zaangażowaniem</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Mission Section -->
+      <section class="section">
+        <div class="grid grid--2">
+          <div>
+            <h2 data-i18n="aboutMissionTitle">Nasza misja</h2>
+            <p data-i18n="aboutMissionDesc">Naszą misją jest dostarczanie najwyższej jakości usług transportowych, łącząc profesjonalizm z indywidualnym podejściem do każdego klienta. Działamy zgodnie z najwyższymi standardami branży.</p>
+          </div>
+          <div class="about-image">
+            <img src="assets/hero-truck.svg" alt="Transport illustration" class="img-responsive" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Values Section -->
+      <section class="section section--alt">
+        <h2 data-i18n="aboutValuesTitle">Nasze wartości</h2>
+        <div class="grid grid--2">
+          <article class="card">
+            <h3 data-i18n="aboutValue1">Rzetelność i terminowość</h3>
+          </article>
+          <article class="card">
+            <h3 data-i18n="aboutValue2">Bezpieczeństwo przewożonych ładunków</h3>
+          </article>
+          <article class="card">
+            <h3 data-i18n="aboutValue3">Partnerskie relacje z klientami</h3>
+          </article>
+          <article class="card">
+            <h3 data-i18n="aboutValue4">Ciągły rozwój i innowacje</h3>
+          </article>
+        </div>
+      </section>
+
+      <!-- Team Section -->
+      <section class="section">
+        <div class="grid grid--2">
+          <div class="about-image">
+            <img src="assets/team.svg" alt="Team illustration" class="img-responsive" />
+          </div>
+          <div>
+            <h2 data-i18n="aboutTeamTitle">Nasz zespół</h2>
+            <p data-i18n="aboutTeamDesc">Jesteśmy zespołem doświadczonych specjalistów z pasją do logistyki. Każdy członek naszego zespołu wnosi unikalne umiejętności i wiedzę, dzięki czemu możemy oferować kompleksowe rozwiązania transportowe.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience Section -->
+      <section class="section">
+        <h2 data-i18n="aboutExperienceTitle">Nasze doświadczenie</h2>
+        <p data-i18n="aboutExperienceDesc">Wieloletnie doświadczenie w branży transportowej pozwala nam efektywnie zarządzać łańcuchem dostaw i zapewniać najwyższą jakość usług. Obsługujemy zarówno transport krajowy, jak i międzynarodowy.</p>
+        
+        <div class="grid grid--3" style="margin-top: 2rem;">
+          <div class="stat-card">
+            <div class="stat-number">500+</div>
+            <div class="stat-label" data-i18n="aboutStat1">Zrealizowanych zleceń</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">50+</div>
+            <div class="stat-label" data-i18n="aboutStat2">Partnerów biznesowych</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">24/7</div>
+            <div class="stat-label" data-i18n="aboutStat3">Wsparcie dla klientów</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="section" style="text-align: center;">
+        <a class="btn" href="/contact.html" data-i18n="navContact">Kontakt</a>
+      </section>
+    </div>
   </main>
 
   <footer class="site-footer" role="contentinfo">

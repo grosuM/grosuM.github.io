@@ -26,7 +26,7 @@
         </button>
 
         <ul id="nav-list" class="nav-list">
-          <li><a href="/about.html" data-i18n="navAbout">O firmie</a></li>
+          <li><a href="/about.html" data-i18n="navAbout">O nas</a></li>
           <li><a href="/services.html" data-i18n="navServices">Usługi</a></li>
           <li><a href="/carrier.html" class="active" data-i18n="navCarrier">Dla przewoźnika</a></li>
           <li><a class="btn btn--contact" href="/contact.html" data-i18n="navContact">Kontakt</a></li>
@@ -40,33 +40,70 @@
 
   <main id="main" class="container" role="main">
     <section class="section">
-      <h1>Dla przewoźnika</h1>
-      <p class="section-lead">Dołącz do naszej sieci transportowej i rozwijaj swój biznes</p>
+      <h1 data-i18n="carrierTitle">Dla przewoźnika</h1>
+      <p class="section-lead" data-i18n="carrierLead">Dołącz do naszej sieci transportowej i rozwijaj swój biznes</p>
 
-      <div class="grid grid--2">
+      <!-- Offer Variants -->
+      <div class="carrier-offers">
+        <h2 data-i18n="carrierOfferTitle">Nasza oferta</h2>
+        <div class="grid grid--3">
+          <article class="card card--highlight">
+            <div class="card-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+              </svg>
+            </div>
+            <h3 data-i18n="carrierOffer1Title">Regularne zlecenia</h3>
+            <p data-i18n="carrierOffer1Desc">Zapewniamy stały dostęp do zleceń transportowych na trasach krajowych i międzynarodowych</p>
+          </article>
+
+          <article class="card card--highlight">
+            <div class="card-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243 2.829a4.978 4.978 0 01-1.414-2.83m-1.414 5.658a9 9 0 01-2.167-9.238m7.824 2.167a1 1 0 111.414 1.414 1 1 0 01-1.414-1.414z"/>
+              </svg>
+            </div>
+            <h3 data-i18n="carrierOffer2Title">Wsparcie 24/7</h3>
+            <p data-i18n="carrierOffer2Desc">Profesjonalne wsparcie logistyczne i administracyjne przez całą dobę</p>
+          </article>
+
+          <article class="card card--highlight">
+            <div class="card-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <h3 data-i18n="carrierOffer3Title">Terminowe płatności</h3>
+            <p data-i18n="carrierOffer3Desc">Gwarantujemy terminowe rozliczenia i konkurencyjne stawki za wykonane przewozy</p>
+          </article>
+        </div>
+      </div>
+
+      <!-- Benefits and Requirements -->
+      <div class="grid grid--2" style="margin-top: 3rem;">
         <article class="card">
-          <h2>Korzyści dla przewoźników</h2>
-          <ul class="list">
-            <li>Stały dostęp do zleceń transportowych</li>
-            <li>Konkurencyjne stawki i terminowe płatności</li>
-            <li>Wsparcie logistyczne i administracyjne</li>
-            <li>Szkolenia i rozwój kompetencji</li>
+          <h2 data-i18n="carrierBenefitsTitle">Korzyści dla przewoźników</h2>
+          <ul class="list list--check">
+            <li data-i18n="carrierBenefit1">Stały dostęp do zleceń transportowych</li>
+            <li data-i18n="carrierBenefit2">Konkurencyjne stawki i terminowe płatności</li>
+            <li data-i18n="carrierBenefit3">Wsparcie logistyczne i administracyjne</li>
+            <li data-i18n="carrierBenefit4">Szkolenia i rozwój kompetencji</li>
           </ul>
         </article>
 
         <article class="card">
-          <h2>Wymagania</h2>
-          <ul class="list">
-            <li>Aktualne ubezpieczenie OCP i AC</li>
-            <li>Sprawny pojazd z aktualnym przeglądem</li>
-            <li>Doświadczenie w transporcie krajowym/międzynarodowym</li>
-            <li>Rzetelność i terminowość</li>
+          <h2 data-i18n="carrierRequirementsTitle">Wymagania</h2>
+          <ul class="list list--check">
+            <li data-i18n="carrierReq1">Aktualne ubezpieczenie OCP i AC</li>
+            <li data-i18n="carrierReq2">Sprawny pojazd z aktualnym przeglądem</li>
+            <li data-i18n="carrierReq3">Doświadczenie w transporcie krajowym/międzynarodowym</li>
+            <li data-i18n="carrierReq4">Rzetelność i terminowość</li>
           </ul>
         </article>
       </div>
 
       <div class="section" style="text-align: center; margin-top: 2rem;">
-        <a class="btn" href="/contact.html">Skontaktuj się z nami</a>
+        <a class="btn" href="/contact.html" data-i18n="carrierCtaContact">Skontaktuj się z nami</a>
       </div>
     </section>
   </main>
