@@ -53,6 +53,9 @@
       aboutTeamDesc: 'Jesteśmy zespołem doświadczonych specjalistów z pasją do logistyki. Każdy członek naszego zespołu wnosi unikalne umiejętności i wiedzę, dzięki czemu możemy oferować kompleksowe rozwiązania transportowe.',
       aboutExperienceTitle: 'Nasze doświadczenie',
       aboutExperienceDesc: 'Wieloletnie doświadczenie w branży transportowej pozwala nam efektywnie zarządzać łańcuchem dostaw i zapewniać najwyższą jakość usług. Obsługujemy zarówno transport krajowy, jak i międzynarodowy.',
+      aboutStat1: 'Zrealizowanych zleceń',
+      aboutStat2: 'Partnerów biznesowych',
+      aboutStat3: 'Wsparcie dla klientów',
       
       // Services page
       servicesTitle: 'Nasze usługi',
@@ -159,6 +162,9 @@
       aboutTeamDesc: 'We are a team of experienced specialists with a passion for logistics. Each member of our team brings unique skills and knowledge, allowing us to offer comprehensive transport solutions.',
       aboutExperienceTitle: 'Our Experience',
       aboutExperienceDesc: 'Years of experience in the transport industry allow us to effectively manage the supply chain and ensure the highest quality of services. We handle both domestic and international transport.',
+      aboutStat1: 'Completed orders',
+      aboutStat2: 'Business partners',
+      aboutStat3: 'Customer support',
       
       // Services page
       servicesTitle: 'Our Services',
