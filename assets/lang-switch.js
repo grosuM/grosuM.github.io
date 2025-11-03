@@ -111,7 +111,7 @@
       contactEmergency: 'Wsparcie awaryjne 24/7 dostępne dla klientów',
       
       // Footer
-      footerText: 'Starter Transport · Pomagamy nowym operatorom dostarczać na czas.',
+      footerText: 'MIGRO · Profesjonalny transport międzynarodowy',
       footerServices: 'Usługi',
       footerAbout: 'O nas',
       footerContact: 'Kontakt',
@@ -220,7 +220,7 @@
       contactEmergency: '24/7 emergency support available for clients',
       
       // Footer
-      footerText: 'Starter Transport · Helping new operators deliver on time.',
+      footerText: 'MIGRO · Professional international transport',
       footerServices: 'Services',
       footerAbout: 'About Us',
       footerContact: 'Contact',
