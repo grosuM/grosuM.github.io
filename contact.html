@@ -25,7 +25,19 @@
         </button>
 
         <ul id="nav-list" class="nav-list">
-          <li><a href="/about.html" data-i18n="navAbout">O nas</a></li>
+          <li class="nav-item nav-item--dropdown">
+            <a href="/about.html" data-i18n="navAbout">O nas</a>
+            <button class="nav-dropdown-toggle" aria-label="Rozwiń menu O nas" aria-expanded="false">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M2 4l4 4 4-4"/>
+              </svg>
+            </button>
+            <ul class="nav-dropdown">
+              <li><a href="/about.html#o-nas" data-i18n="navAboutUs">O nas</a></li>
+              <li><a href="/about.html#nasze-wartosci" data-i18n="navOurValues">Nasze wartości</a></li>
+              <li><a href="/about.html#nasze-doswiadczenie" data-i18n="navOurExperience">Nasze doświadczenie</a></li>
+            </ul>
+          </li>
           <li><a href="/services.html" data-i18n="navServices">Usługi</a></li>
           <li><a href="/carrier.html" data-i18n="navCarrier">Dla przewoźnika</a></li>
           <li><a class="btn btn--contact active" href="/contact.html" data-i18n="navContact">Kontakt</a></li>
@@ -172,7 +184,9 @@
           <h3>Firma</h3>
           <ul>
             <li><a href="/about.html">O nas</a></li>
-            <li><a href="/about.html#documents">Dokumenty</a></li>
+            <li><a href="/about.html#o-nas" data-i18n="navAboutUs">O nas</a></li>
+            <li><a href="/about.html#nasze-wartosci" data-i18n="navOurValues">Nasze wartości</a></li>
+            <li><a href="/about.html#nasze-doswiadczenie" data-i18n="navOurExperience">Nasze doświadczenie</a></li>
           </ul>
         </div>
 
@@ -201,6 +215,91 @@
   <script src="/assets/lang-switch.js"></script>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Navigation dropdown functionality
+    const dropdownToggles = document.querySelectorAll('.nav-dropdown-toggle');
+    
+    dropdownToggles.forEach(function(toggle) {
+      toggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+        const dropdown = this.parentElement.querySelector('.nav-dropdown');
+        
+        // Close all other dropdowns
+        document.querySelectorAll('.nav-dropdown-toggle').forEach(function(otherToggle) {
+          if (otherToggle !== toggle) {
+            otherToggle.setAttribute('aria-expanded', 'false');
+            const otherDropdown = otherToggle.parentElement.querySelector('.nav-dropdown');
+            if (otherDropdown) {
+              otherDropdown.classList.remove('nav-dropdown--open');
+            }
+          }
+        });
+        
+        // Toggle current dropdown
+        this.setAttribute('aria-expanded', String(!isExpanded));
+        if (dropdown) {
+          dropdown.classList.toggle('nav-dropdown--open');
+        }
+      });
+    });
+    
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.nav-item--dropdown')) {
+        document.querySelectorAll('.nav-dropdown-toggle').forEach(function(toggle) {
+          toggle.setAttribute('aria-expanded', 'false');
+          const dropdown = toggle.parentElement.querySelector('.nav-dropdown');
+          if (dropdown) {
+            dropdown.classList.remove('nav-dropdown--open');
+          }
+        });
+      }
+    });
+    
+    // Smooth scroll to sections with offset for fixed header
+    document.querySelectorAll('a[href^="#"], a[href*="#"]').forEach(function(anchor) {
+      anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        const hashIndex = href.indexOf('#');
+        
+        if (hashIndex !== -1) {
+          const hash = href.substring(hashIndex);
+          
+          // Only handle if the hash exists and targets an element on this page
+          if (hash.length > 1) {
+            const targetId = hash.substring(1);
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+              e.preventDefault();
+              
+              // Close any open dropdowns
+              document.querySelectorAll('.nav-dropdown').forEach(function(dropdown) {
+                dropdown.classList.remove('nav-dropdown--open');
+              });
+              document.querySelectorAll('.nav-dropdown-toggle').forEach(function(toggle) {
+                toggle.setAttribute('aria-expanded', 'false');
+              });
+              
+              // Calculate offset for fixed header (header height + some padding)
+              const headerOffset = 100;
+              const elementPosition = targetElement.getBoundingClientRect().top;
+              const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+              
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+              });
+            }
+          }
+        }
+      });
+    });
+
+    // Mobile navigation toggle
     const navToggle = document.querySelector('.nav-toggle');
     const navList = document.getElementById('nav-list');
     navToggle && navToggle.addEventListener('click', function() {
@@ -208,6 +307,10 @@
       this.setAttribute('aria-expanded', String(!expanded));
       navList.classList.toggle('nav-list--open');
     });
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('reduced-motion');
+    }
   </script>
 </body>
 </html>
