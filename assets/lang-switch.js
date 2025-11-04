@@ -18,7 +18,7 @@
       changeLang: 'Zmień język',
       
       // Index page
-      heroTitle: 'MIGRO - Twój partner w transporcie i logistyce.',
+      heroTitle: 'MIGRO<br>Twój partner w transporcie i logistyce.',
       heroSub: 'Kompleksowa obsługa transportu dla firm i przewoźników - przejrzyście, szybko, bez zbędnych formalności.',
       ctaQuote: 'Bezpłatna wycena',
       ctaServices: 'Zobacz usługi',
@@ -127,7 +127,7 @@
       changeLang: 'Change language',
       
       // Index page
-      heroTitle: 'MIGRO - Your transport and logistics partner.',
+      heroTitle: 'MIGRO<br>Your transport and logistics partner.',
       heroSub: 'Comprehensive transport services for companies and carriers - transparent, fast, without unnecessary formalities.',
       ctaQuote: 'Free quote',
       ctaServices: 'See services',
@@ -245,7 +245,8 @@
         if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
           el.placeholder = t[key];
         } else {
-          el.textContent = t[key];
+          // Use innerHTML for elements that may contain HTML tags like <br>
+          el.innerHTML = t[key];
         }
       }
     });
