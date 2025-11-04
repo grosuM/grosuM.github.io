@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120" fill="none">
+  <path d="M20 40 Q100 20 180 40 L180 80 Q100 100 20 80 Z" fill="#0066FF"/>
+  <path d="M25 42 Q100 24 175 42 L175 78 Q100 96 25 78 Z" fill="#00CCFF" opacity="0.3"/>
+  <line x1="30" y1="45" x2="170" y2="45" stroke="white" stroke-width="1.5" stroke-dasharray="5,5"/>
+  <line x1="30" y1="55" x2="170" y2="55" stroke="white" stroke-width="1.5" stroke-dasharray="5,5"/>
+  <line x1="30" y1="65" x2="170" y2="65" stroke="white" stroke-width="1.5" stroke-dasharray="5,5"/>
+  <line x1="30" y1="75" x2="170" y2="75" stroke="white" stroke-width="1.5" stroke-dasharray="5,5"/>
+  <text x="100" y="105" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#0066FF" text-anchor="middle">MIGRO</text>
+</svg>
