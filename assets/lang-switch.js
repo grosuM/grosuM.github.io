@@ -18,11 +18,11 @@
       changeLang: 'Zmień język',
       
       // Index page
-      heroTitle: 'Profesjonalny transport dla Twojego biznesu',
-      heroSub: 'Kompleksowe usługi transportowe dla przewoźników i firm: fracht, dostawy lokalne, planowanie logistyki. Proste wdrożenie, przejrzyste ceny i narzędzia do rozwoju.',
+      heroTitle: 'MIGRO - Twój partner w transporcie i logistyce.',
+      heroSub: 'Kompleksowa obsługa transportu dla firm i przewoźników - przejrzyście, szybko, bez zbędnych formalności.',
       ctaQuote: 'Bezpłatna wycena',
       ctaServices: 'Zobacz usługi',
-      trust1: 'Wsparcie 24/7',
+      trust1: 'Profesjonalne wsparcie',
       trust2: 'Przejrzyste ceny',
       trust3: 'Zaufani kierowcy',
       
@@ -32,7 +32,7 @@
       feature1Title: 'Doświadczenie',
       feature1Desc: 'Lata doświadczenia w transporcie krajowym i międzynarodowym',
       feature2Title: 'Niezawodność',
-      feature2Desc: 'Terminowe dostawy i profesjonalna obsługa 24/7',
+      feature2Desc: 'Terminowe dostawy i profesjonalna obsługa',
       feature3Title: 'Bezpieczeństwo',
       feature3Desc: 'Pełne ubezpieczenie i monitorowanie przesyłek',
       feature4Title: 'Konkurencyjne ceny',
@@ -127,11 +127,11 @@
       changeLang: 'Change language',
       
       // Index page
-      heroTitle: 'Professional transport for your business',
-      heroSub: 'Comprehensive transport services for carriers and companies: freight, local deliveries, logistics planning. Simple implementation, transparent pricing and growth tools.',
+      heroTitle: 'MIGRO - Your transport and logistics partner.',
+      heroSub: 'Comprehensive transport services for companies and carriers - transparent, fast, without unnecessary formalities.',
       ctaQuote: 'Free quote',
       ctaServices: 'See services',
-      trust1: '24/7 Support',
+      trust1: 'Professional Support',
       trust2: 'Transparent Pricing',
       trust3: 'Trusted Drivers',
       
@@ -141,7 +141,7 @@
       feature1Title: 'Experience',
       feature1Desc: 'Years of experience in domestic and international transport',
       feature2Title: 'Reliability',
-      feature2Desc: 'On-time deliveries and professional 24/7 service',
+      feature2Desc: 'On-time deliveries and professional service',
       feature3Title: 'Safety',
       feature3Desc: 'Full insurance and shipment tracking',
       feature4Title: 'Competitive pricing',

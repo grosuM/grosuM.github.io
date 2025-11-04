@@ -199,15 +199,28 @@ p{ margin-bottom: var(--space-sm); color:var(--muted); }
 /* Hero */
 .hero { padding: calc(var(--space-lg) * 1.2) 0; }
 .hero-inner{
-  display:grid;
-  gap:var(--space-lg);
+  display:flex;
+  flex-direction: column;
   align-items:center;
-  grid-template-columns: 1fr 420px;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
 }
-.hero-title{ font-size:2rem; color:var(--contrast); margin-bottom:8px; }
-.hero-sub{ color:var(--muted); margin-bottom:16px; font-size:1.0625rem; }
-.hero-cta { display:flex; gap:12px; align-items:center; margin-bottom: 14px; }
-.trust-list{ display:flex; gap:18px; margin-top:14px; list-style:none; color:var(--contrast); font-weight:600; }
+.hero-title{ font-size:2.5rem; color:var(--contrast); margin-bottom:16px; font-weight: 800; line-height: 1.2; }
+.hero-sub{ color:var(--muted); margin-bottom:24px; font-size:1.125rem; max-width: 700px; }
+.hero-cta { display:flex; gap:12px; align-items:center; justify-content: center; margin-bottom: 24px; flex-wrap: wrap; }
+.trust-list{ display:flex; gap:24px; margin-top:20px; list-style:none; color:var(--contrast); font-weight:600; justify-content: center; flex-wrap: wrap; }
+.trust-list li { 
+  padding: 10px 20px; 
+  background: linear-gradient(135deg, rgba(0,102,255,0.05), rgba(0,204,255,0.05)); 
+  border-radius: 999px; 
+  border: 1px solid rgba(0,102,255,0.1);
+  transition: transform var(--transition-fast), box-shadow var(--transition);
+}
+.trust-list li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,102,255,0.1);
+}
 
 /* Buttons */
 .btn{
@@ -497,9 +510,9 @@ input:focus, select:focus, textarea:focus{
   .nav-list{ display:none; flex-direction:column; width:100%; background:transparent; }
   .nav-list.nav-list--open{ display:flex; position:absolute; left:0; top:64px; right:0; padding:12px; background: linear-gradient(90deg,var(--brand-primary),var(--accent)); }
   .nav-toggle{ display:inline-flex; }
-  .hero-inner{ grid-template-columns: 1fr; }
-  .hero-visual{ display:none; }
-  .trust-list{ display:none; }
+  .hero-title{ font-size:1.75rem; }
+  .hero-sub{ font-size:1rem; }
+  .trust-list{ gap:16px; font-size:0.9rem; }
   .stats{ flex-direction:column; gap:12px; }
 }
 
