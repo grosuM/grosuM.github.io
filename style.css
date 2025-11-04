@@ -121,6 +121,22 @@ p{ margin-bottom: var(--space-sm); color:var(--muted); }
 .logo svg { display:block; }
 .brand-text { font-weight:700; font-size:1.1rem; white-space:nowrap; }
 
+/* Header logo - ensure visibility on blue gradient background */
+.site-header .logo img {
+  background: white;
+  border-radius: 8px;
+  padding: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Footer logo - ensure visibility on dark background */
+.site-footer .logo img {
+  background: white;
+  border-radius: 8px;
+  padding: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
 /* Nav */
 .main-nav{ display:flex; align-items:center; gap:12px; }
 .nav-list{
