@@ -51,45 +51,86 @@
 
   <main id="main" class="container" role="main">
     <section class="section">
-      <h1 class="section-title" data-i18n="servicesTitle">Nasze usługi</h1>
+      <!-- Hero Section -->
+      <div class="services-hero">
+        <h1 class="services-hero-title">
+          <span class="highlight-blue">Jedziemy</span> w tę samą stronę
+        </h1>
+        <p class="services-hero-desc">
+          Wychodzimy z założenia, że nie ma rzeczy niemożliwych.<br>
+          Transportujemy prawie wszystko — od kontenerów morskich, przez ładunki paletowe i chłodnicze, po owoce i warzywa na wywrotkach.<br>
+          Dopasowujemy środek transportu, planujemy trasę i dbamy o terminowość na każdym etapie.<br>
+          Ty mówisz co, gdzie i kiedy — my zajmujemy się resztą.
+        </p>
+      </div>
+
+      <h2 class="section-title" data-i18n="servicesTitle">Nasze usługi</h2>
       <p class="section-lead" data-i18n="servicesLead">Odkryj pełen zakres naszych usług transportowych</p>
 
-      <div class="services-grid">
-        <article id="freight" class="card card--service">
-          <div class="card-icon">
-            <img src="assets/ico-freight.svg" alt="" aria-hidden="true" />
+      <div class="transport-types-grid">
+        <article id="kontenery" class="transport-card">
+          <div class="transport-card-inner">
+            <div class="transport-card-front">
+              <img src="assets/transport-container.svg" alt="Kontenery MIGRO" />
+              <h3>Kontenery</h3>
+            </div>
+            <div class="transport-card-back">
+              <h3>Kontenery</h3>
+              <p>Kontenery morskie o różnych rozmiarach. Idealne do transportu międzynarodowego i ładunków wielkogabarytowych.</p>
+            </div>
           </div>
-          <h2 data-i18n="serviceFreightTitle">Transport i fracht</h2>
-          <p data-i18n="serviceFreightDesc">Kompleksowy transport regionalny i międzynarodowy: przesyłki paletowe, wsparcie dokumentacyjne i śledzenie. Idealne rozwiązanie dla regularnych i jednorazowych ładunków.</p>
-          <ul class="list">
-            <li data-i18n="serviceFreightList1">Konkurencyjne stawki regionalne i międzynarodowe</li>
-            <li data-i18n="serviceFreightList2">Wsparcie w zakresie dokumentacji i celów</li>
-            <li data-i18n="serviceFreightList3">System śledzenia przesyłek online</li>
-          </ul>
         </article>
 
-        <article id="local" class="card card--service">
-          <div class="card-icon">
-            <img src="assets/ico-local.svg" alt="" aria-hidden="true" />
+        <article id="plandeki" class="transport-card">
+          <div class="transport-card-inner">
+            <div class="transport-card-front">
+              <img src="assets/transport-plandeka.svg" alt="Plandeki MIGRO" />
+              <h3>Plandeki</h3>
+            </div>
+            <div class="transport-card-back">
+              <h3>Plandeki</h3>
+              <p>Uniwersalne naczepy plandekowe. Szybki załadunek i rozładunek, idealne do ładunków paletowych.</p>
+            </div>
           </div>
-          <h2 data-i18n="serviceLocalTitle">Dostawy lokalne i ostatniej mili</h2>
-          <p data-i18n="serviceLocalDesc">Dostawy miejskie i tego samego dnia, krajowe usługi door-to-door oraz delikatna obsługa towarów wrażliwych.</p>
-          <ul class="list">
-            <li data-i18n="serviceLocalList1">Planowanie tras i harmonogramów</li>
-            <li data-i18n="serviceLocalList2">Obsługa towarów delikatnych z potwierdzeniem odbioru</li>
-          </ul>
         </article>
 
-        <article id="planning" class="card card--service">
-          <div class="card-icon">
-            <img src="assets/ico-plan.svg" alt="" aria-hidden="true" />
+        <article id="chlodnie" class="transport-card">
+          <div class="transport-card-inner">
+            <div class="transport-card-front">
+              <img src="assets/transport-chlodnia.svg" alt="Chłodnie MIGRO" />
+              <h3>Chłodnie</h3>
+            </div>
+            <div class="transport-card-back">
+              <h3>Chłodnie</h3>
+              <p>Transport chłodniczy z kontrolą temperatury. Świeże produkty, owoce i warzywa w doskonałym stanie.</p>
+            </div>
           </div>
-          <h2 data-i18n="servicePlanningTitle">Planowanie logistyki</h2>
-          <p data-i18n="servicePlanningDesc">Optymalizacja tras, modelowanie kosztów i doradztwo, aby pomóc Ci rozwijać działalność bezpiecznie i rentownie.</p>
-          <ul class="list">
-            <li data-i18n="servicePlanningList1">Optymalizacja tras i kosztów</li>
-            <li data-i18n="servicePlanningList2">Szkolenia kierowców i moduły wdrożeniowe</li>
-          </ul>
+        </article>
+
+        <article id="wywrotki" class="transport-card">
+          <div class="transport-card-inner">
+            <div class="transport-card-front">
+              <img src="assets/transport-wywrotka.svg" alt="Wywrotki MIGRO" />
+              <h3>Wywrotki</h3>
+            </div>
+            <div class="transport-card-back">
+              <h3>Wywrotki</h3>
+              <p>Naczepy samowyładowcze do materiałów sypkich, owoców i warzyw. Szybki rozładunek na miejscu.</p>
+            </div>
+          </div>
+        </article>
+
+        <article id="mega" class="transport-card">
+          <div class="transport-card-inner">
+            <div class="transport-card-front">
+              <img src="assets/transport-mega.svg" alt="Naczepy MEGA MIGRO" />
+              <h3>Naczepy MEGA</h3>
+            </div>
+            <div class="transport-card-back">
+              <h3>Naczepy MEGA</h3>
+              <p>Zwiększona przestrzeń ładunkowa. Idealne do lekkich, objętościowych towarów wymagających więcej miejsca.</p>
+            </div>
+          </div>
         </article>
       </div>
 
@@ -131,9 +172,11 @@
         <div class="footer-column">
           <h3>Usługi</h3>
           <ul>
-            <li><a href="/services.html#freight">Transport i fracht</a></li>
-            <li><a href="/services.html#local">Dostawy lokalne</a></li>
-            <li><a href="/services.html#planning">Planowanie logistyki</a></li>
+            <li><a href="/services.html#kontenery">Kontenery</a></li>
+            <li><a href="/services.html#plandeki">Plandeki</a></li>
+            <li><a href="/services.html#chlodnie">Chłodnie</a></li>
+            <li><a href="/services.html#wywrotki">Wywrotki</a></li>
+            <li><a href="/services.html#mega">Naczepy MEGA</a></li>
             <li><a href="/carrier.html">Dla przewoźnika</a></li>
           </ul>
         </div>
@@ -142,7 +185,6 @@
         <div class="footer-column">
           <h3>Firma</h3>
           <ul>
-            <li><a href="/about.html">O nas</a></li>
             <li><a href="/about.html#o-nas" data-i18n="navAboutUs">O nas</a></li>
             <li><a href="/about.html#nasze-wartosci" data-i18n="navOurValues">Nasze wartości</a></li>
             <li><a href="/about.html#nasze-doswiadczenie" data-i18n="navOurExperience">Nasze doświadczenie</a></li>

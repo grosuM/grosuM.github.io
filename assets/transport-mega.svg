@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120" fill="none">
+  <rect x="20" y="25" width="160" height="70" fill="#0066FF" rx="4"/>
+  <rect x="25" y="30" width="150" height="60" fill="#00CCFF" opacity="0.3"/>
+  <rect x="30" y="35" width="140" height="15" fill="white" opacity="0.4"/>
+  <rect x="30" y="55" width="140" height="15" fill="white" opacity="0.4"/>
+  <rect x="30" y="75" width="140" height="10" fill="white" opacity="0.4"/>
+  <text x="100" y="110" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#0066FF" text-anchor="middle">MIGRO</text>
+</svg>

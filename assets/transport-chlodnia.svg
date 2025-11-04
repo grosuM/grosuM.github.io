@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120" fill="none">
+  <rect x="20" y="30" width="160" height="60" fill="#0066FF" rx="4"/>
+  <rect x="25" y="35" width="150" height="50" fill="#00CCFF" opacity="0.3"/>
+  <!-- Snowflake symbols -->
+  <text x="60" y="55" font-family="Arial, sans-serif" font-size="24" fill="white">❄</text>
+  <text x="100" y="70" font-family="Arial, sans-serif" font-size="24" fill="white">❄</text>
+  <text x="140" y="55" font-family="Arial, sans-serif" font-size="24" fill="white">❄</text>
+  <text x="100" y="105" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#0066FF" text-anchor="middle">MIGRO</text>
+</svg>
