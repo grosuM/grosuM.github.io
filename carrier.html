@@ -39,7 +39,21 @@
               <li><a href="/about.html#nasze-doswiadczenie" data-i18n="navOurExperience">Nasze doświadczenie</a></li>
             </ul>
           </li>
-          <li><a href="/services.html" data-i18n="navServices">Usługi</a></li>
+          <li class="nav-item nav-item--dropdown">
+            <a href="/services.html" data-i18n="navServices">Usługi</a>
+            <button class="nav-dropdown-toggle" aria-label="Rozwiń menu Usługi" aria-expanded="false">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M2 4l4 4 4-4"/>
+              </svg>
+            </button>
+            <ul class="nav-dropdown">
+              <li><a href="/services.html#kontenery">Kontenery</a></li>
+              <li><a href="/services.html#plandeki">Plandeki</a></li>
+              <li><a href="/services.html#chlodnie">Chłodnie</a></li>
+              <li><a href="/services.html#wywrotki">Wywrotki</a></li>
+              <li><a href="/services.html#mega">Naczepy MEGA</a></li>
+            </ul>
+          </li>
           <li><a href="/carrier.html" class="active" data-i18n="navCarrier">Dla przewoźnika</a></li>
           <li><a class="btn btn--contact" href="/contact.html" data-i18n="navContact">Kontakt</a></li>
           <li class="lang-switch">
@@ -52,7 +66,7 @@
 
   <main id="main" class="container" role="main">
     <section class="section">
-      <h1 data-i18n="carrierTitle">Dla przewoźnika</h1>
+      <h1 style="text-align: center;" data-i18n="carrierTitle">Dla przewoźnika</h1>
       <p class="section-lead" data-i18n="carrierLead">Dołącz do naszej sieci transportowej i rozwijaj swój biznes</p>
 
       <!-- Offer Variants -->
@@ -75,7 +89,7 @@
                 <path d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243 2.829a4.978 4.978 0 01-1.414-2.83m-1.414 5.658a9 9 0 01-2.167-9.238m7.824 2.167a1 1 0 111.414 1.414 1 1 0 01-1.414-1.414z"/>
               </svg>
             </div>
-            <h3 data-i18n="carrierOffer2Title">Wsparcie 24/7</h3>
+            <h3 data-i18n="carrierOffer2Title">Wsparcie</h3>
             <p data-i18n="carrierOffer2Desc">Profesjonalne wsparcie logistyczne i administracyjne przez całą dobę</p>
           </article>
 
@@ -99,7 +113,6 @@
             <li data-i18n="carrierBenefit1">Stały dostęp do zleceń transportowych</li>
             <li data-i18n="carrierBenefit2">Konkurencyjne stawki i terminowe płatności</li>
             <li data-i18n="carrierBenefit3">Wsparcie logistyczne i administracyjne</li>
-            <li data-i18n="carrierBenefit4">Szkolenia i rozwój kompetencji</li>
           </ul>
         </article>
 
@@ -111,6 +124,36 @@
             <li data-i18n="carrierReq3">Doświadczenie w transporcie krajowym/międzynarodowym</li>
             <li data-i18n="carrierReq4">Rzetelność i terminowość</li>
           </ul>
+        </article>
+      </div>
+
+      <!-- We Are Looking For Section -->
+      <div style="margin-top: 4rem;">
+        <article class="card" style="background: linear-gradient(135deg, #0066FF 0%, #0052CC 100%); color: white; padding: 3rem; text-align: center; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,102,255,0.3);">
+          <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; color: white;">Kogo aktualnie szukamy?</h2>
+          <div style="max-width: 800px; margin: 0 auto;">
+            <div style="background: rgba(255,255,255,0.15); border-radius: 8px; padding: 2rem; margin-top: 2rem; backdrop-filter: blur(10px);">
+              <div style="display: flex; align-items: center; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="flex-shrink: 0;">
+                  <path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"/>
+                  <path d="M13 16V6h-3v10M5.8 8.6L9 16h6l3.2-7.4"/>
+                  <path d="M6 6h12v4H6z"/>
+                </svg>
+                <div style="text-align: left;">
+                  <h3 style="font-size: 2rem; font-weight: 700; margin: 0 0 0.5rem 0; color: white;">Przewoźników z naczepą MEGA</h3>
+                  <p style="font-size: 1.2rem; margin: 0; opacity: 0.95;">Dołącz do zespołu profesjonalistów i wykorzystaj pełny potencjał swojej floty</p>
+                </div>
+              </div>
+              <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2);">
+                <p style="font-size: 1.1rem; margin-bottom: 1.5rem; opacity: 0.95;">
+                  <strong>Oferujemy:</strong> Regularne zlecenia • Atrakcyjne stawki • Profesjonalne wsparcie logistyczne • Terminowe płatności
+                </p>
+                <a class="btn" href="/contact.html" style="background: white; color: #0066FF; font-weight: 700; padding: 1rem 2.5rem; font-size: 1.1rem; box-shadow: 0 4px 20px rgba(0,0,0,0.2); border: none;">
+                  Aplikuj już teraz!
+                </a>
+              </div>
+            </div>
+          </div>
         </article>
       </div>
 
@@ -157,7 +200,6 @@
             <li><a href="/services.html#chlodnie">Chłodnie</a></li>
             <li><a href="/services.html#wywrotki">Wywrotki</a></li>
             <li><a href="/services.html#mega">Naczepy MEGA</a></li>
-            <li><a href="/carrier.html">Dla przewoźnika</a></li>
           </ul>
         </div>
 
@@ -168,6 +210,7 @@
             <li><a href="/about.html#o-nas" data-i18n="navAboutUs">O nas</a></li>
             <li><a href="/about.html#nasze-wartosci" data-i18n="navOurValues">Nasze wartości</a></li>
             <li><a href="/about.html#nasze-doswiadczenie" data-i18n="navOurExperience">Nasze doświadczenie</a></li>
+            <li><a href="/carrier.html">Dla przewoźnika</a></li>
           </ul>
         </div>
 
@@ -188,7 +231,7 @@
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; <span id="year"></span> MIGRO Spedycja. Wszelkie prawa zastrzeżone.</p>
+        <p>&copy; <span id="year"></span> MIGRO Mikołaj Gros. Wszelkie prawa zastrzeżone.</p>
       </div>
     </div>
   </footer>
@@ -265,13 +308,17 @@
                 toggle.setAttribute('aria-expanded', 'false');
               });
               
-              // Calculate offset for fixed header (header height + some padding)
-              const headerOffset = 100;
+              // Calculate offset to center element in viewport
+              const headerOffset = 80; // Fixed header height
               const elementPosition = targetElement.getBoundingClientRect().top;
-              const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+              const elementHeight = targetElement.offsetHeight;
+              const viewportHeight = window.innerHeight;
+              
+              // Center the element: scroll so element center aligns with viewport center
+              const offsetPosition = elementPosition + window.pageYOffset - (viewportHeight / 2) + (elementHeight / 2) + headerOffset;
               
               window.scrollTo({
-                top: offsetPosition,
+                top: Math.max(0, offsetPosition), // Don't scroll past top of page
                 behavior: 'smooth'
               });
             }
