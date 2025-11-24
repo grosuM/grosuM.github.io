@@ -1059,9 +1059,21 @@ input:focus, select:focus, textarea:focus{
   opacity: 1;
 }
 
-.service-card:focus {
+.service-card:focus-visible {
   outline: 3px solid var(--brand-primary);
   outline-offset: 2px;
+}
+
+.service-card:focus-visible .service-card__summary {
+  opacity: 0;
+  max-height: 0;
+  margin-bottom: 0;
+}
+
+.service-card:focus-visible .service-card__reveal {
+  max-height: 200px;
+  opacity: 1;
+  margin-top: var(--space-sm);
 }
 
 .service-card__content {

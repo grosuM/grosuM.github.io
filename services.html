@@ -338,15 +338,21 @@
 
     // Service cards tap toggle for mobile
     const serviceCards = document.querySelectorAll('.service-card');
+    const isTouchDevice = window.matchMedia('(hover: none)').matches;
+    
     serviceCards.forEach(function(card) {
+      // Add keyboard accessibility
+      card.setAttribute('tabindex', '0');
+      card.setAttribute('role', 'button');
+      
       card.addEventListener('click', function(e) {
         // Don't toggle if clicking the CTA link
         if (e.target.closest('.service-card__cta')) {
           return;
         }
         
-        // Check if we're on a touch device (no hover capability)
-        if (window.matchMedia('(hover: none)').matches) {
+        // Toggle on touch devices only
+        if (isTouchDevice) {
           e.preventDefault();
           
           // Close other cards
@@ -357,6 +363,14 @@
           });
           
           // Toggle this card
+          card.classList.toggle('service-card--active');
+        }
+      });
+      
+      // Handle keyboard interaction
+      card.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
           card.classList.toggle('service-card--active');
         }
       });
