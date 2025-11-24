@@ -823,8 +823,8 @@ input:focus, select:focus, textarea:focus{
 
 .contact-logo {
   margin: 0 auto var(--space);
-  width: 80px;
-  height: 80px;
+  width: 120px;
+  height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -915,6 +915,18 @@ input:focus, select:focus, textarea:focus{
 }
 
 .contact-map img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.contact-bottom-image {
+  margin-top: var(--space-md);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.contact-bottom-image img {
   width: 100%;
   height: auto;
   display: block;

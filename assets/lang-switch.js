@@ -110,9 +110,9 @@
       contactPhone: 'Telefon',
       contactAddress: 'Adres',
       contactNip: 'NIP',
-      contactHoursTitle: 'Godziny pracy',
-      contactHours: 'Poniedziałek - Piątek: 8:00 - 18:00',
-      contactEmergency: 'Wsparcie awaryjne 24/7 dostępne dla klientów',
+      contactHoursTitle: 'Obsługa klienta',
+      contactHours: 'Jesteśmy do Twojej dyspozycji przez cały tydzień',
+      contactEmergency: 'Profesjonalna obsługa i szybki kontakt',
       
       // Footer
       footerText: 'MIGRO · Profesjonalny transport międzynarodowy',
@@ -223,9 +223,9 @@
       contactPhone: 'Phone',
       contactAddress: 'Address',
       contactNip: 'Tax ID',
-      contactHoursTitle: 'Business Hours',
-      contactHours: 'Monday - Friday: 8:00 AM - 6:00 PM',
-      contactEmergency: '24/7 emergency support available for clients',
+      contactHoursTitle: 'Customer Service',
+      contactHours: 'We are at your disposal throughout the week',
+      contactEmergency: 'Professional service and quick contact',
       
       // Footer
       footerText: 'MIGRO · Professional international transport',
