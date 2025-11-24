@@ -15,7 +15,7 @@
     <div class="container header-inner">
       <a class="logo" href="/" aria-label="Strona główna">
         <img src="assets/logo.png" alt="Logo" width="80" height="80" />
-        <span class="brand-text">MIGRO Spedycja</span>
+        <span class="brand-text" data-i18n="brandText">MIGRO Spedycja</span>
       </a>
 
       <nav class="main-nav" aria-label="Główna nawigacja">
@@ -34,7 +34,6 @@
             </button>
             <ul class="nav-dropdown">
               <li><a href="/about.html#o-nas" data-i18n="navAboutUs">O nas</a></li>
-              <li><a href="/documents.html">Dokumenty</a></li>
               <li><a href="/about.html#nasze-wartosci" data-i18n="navOurValues">Nasze wartości</a></li>
               <li><a href="/about.html#nasze-doswiadczenie" data-i18n="navOurExperience">Nasze doświadczenie</a></li>
             </ul>
@@ -47,13 +46,14 @@
               </svg>
             </button>
             <ul class="nav-dropdown">
-              <li><a href="/services.html#kontenery">Kontenery</a></li>
-              <li><a href="/services.html#plandeki">Plandeki</a></li>
-              <li><a href="/services.html#chlodnie">Chłodnie</a></li>
-              <li><a href="/services.html#wywrotki">Wywrotki</a></li>
-              <li><a href="/services.html#mega">Naczepy MEGA</a></li>
+              <li><a href="/services.html#kontenery" data-i18n="serviceContainersTitle">Kontenery</a></li>
+              <li><a href="/services.html#plandeki" data-i18n="serviceTarpaulinsTitle">Plandeki</a></li>
+              <li><a href="/services.html#chlodnie" data-i18n="serviceRefrigeratedTitle">Chłodnie</a></li>
+              <li><a href="/services.html#wywrotki" data-i18n="serviceTippersTitle">Wywrotki</a></li>
+              <li><a href="/services.html#mega" data-i18n="serviceMegaTitle">Naczepy MEGA</a></li>
             </ul>
           </li>
+          <li><a href="/documents.html" data-i18n="navDocuments">Dokumenty</a></li>
           <li><a href="/carrier.html" data-i18n="navCarrier">Dla przewoźnika</a></li>
           <li><a class="btn btn--contact" href="/contact.html" data-i18n="navContact">Kontakt</a></li>
           <li class="lang-switch">
@@ -68,10 +68,10 @@
     <section class="section">
       <!-- Hero Section -->
       <div class="services-hero">
-        <h1 class="services-hero-title">
+        <h1 class="services-hero-title" data-i18n="servicesHeroTitle">
           <span class="highlight-blue">Dowozimy Twoje ładunki</span> wszędzie, gdzie trzeba!
         </h1>
-        <p class="services-hero-desc">
+        <p class="services-hero-desc" data-i18n="servicesHeroDesc">
           Wychodzimy z założenia, że nie ma rzeczy niemożliwych.<br>
           Transportujemy prawie wszystko — od kontenerów morskich, przez ładunki paletowe i chłodnicze, po owoce i warzywa na wywrotkach.<br>
           Dopasowujemy środek transportu, planujemy trasę i dbamy o terminowość na każdym etapie.<br>
@@ -86,12 +86,12 @@
         <article id="kontenery" class="transport-card">
           <div class="transport-card-inner">
             <div class="transport-card-front">
-              <img src="assets/kontener.png" alt="Kontenery MIGRO" />
-              <h3>Kontenery</h3>
+              <img src="kontener-bez-tla.png" alt="Kontenery MIGRO" />
+              <h3 data-i18n="serviceContainersTitle">Kontenery</h3>
             </div>
             <div class="transport-card-back">
-              <h3>Kontenery</h3>
-              <p>Kontenery morskie o różnych rozmiarach. Idealne do transportu międzynarodowego i ładunków wielkogabarytowych.</p>
+              <h3 data-i18n="serviceContainersTitle">Kontenery</h3>
+              <p data-i18n="serviceContainersDesc">Kontenery morskie o różnych rozmiarach. Idealne do transportu międzynarodowego i ładunków wielkogabarytowych.</p>
             </div>
           </div>
         </article>
@@ -99,12 +99,12 @@
         <article id="plandeki" class="transport-card">
           <div class="transport-card-inner">
             <div class="transport-card-front">
-              <img src="assets/plandeka.png" alt="Plandeki MIGRO" />
-              <h3>Plandeki</h3>
+              <img src="plandeka-bez-tla.png" alt="Plandeki MIGRO" />
+              <h3 data-i18n="serviceTarpaulinsTitle">Plandeki</h3>
             </div>
             <div class="transport-card-back">
-              <h3>Plandeki</h3>
-              <p>Uniwersalne naczepy plandekowe. Szybki załadunek i rozładunek, idealne do ładunków paletowych.</p>
+              <h3 data-i18n="serviceTarpaulinsTitle">Plandeki</h3>
+              <p data-i18n="serviceTarpaulinsDesc">Uniwersalne naczepy plandekowe. Szybki załadunek i rozładunek, idealne do ładunków paletowych.</p>
             </div>
           </div>
         </article>
@@ -112,12 +112,12 @@
         <article id="chlodnie" class="transport-card">
           <div class="transport-card-inner">
             <div class="transport-card-front">
-              <img src="assets/chlodnia.png" alt="Chłodnie MIGRO" />
-              <h3>Chłodnie</h3>
+              <img src="chlodnia-bez-tla.png" alt="Chłodnie MIGRO" />
+              <h3 data-i18n="serviceRefrigeratedTitle">Chłodnie</h3>
             </div>
             <div class="transport-card-back">
-              <h3>Chłodnie</h3>
-              <p>Transport chłodniczy z kontrolą temperatury. Świeże produkty, owoce i warzywa w doskonałym stanie.</p>
+              <h3 data-i18n="serviceRefrigeratedTitle">Chłodnie</h3>
+              <p data-i18n="serviceRefrigeratedDesc">Transport chłodniczy z kontrolą temperatury. Świeże produkty, owoce i warzywa w doskonałym stanie.</p>
             </div>
           </div>
         </article>
@@ -125,12 +125,12 @@
         <article id="wywrotki" class="transport-card">
           <div class="transport-card-inner">
             <div class="transport-card-front">
-              <img src="assets/wywrotka.png" alt="Wywrotki MIGRO" />
-              <h3>Wywrotki</h3>
+              <img src="wywrotka-bez-tla.png" alt="Wywrotki MIGRO" />
+              <h3 data-i18n="serviceTippersTitle">Wywrotki</h3>
             </div>
             <div class="transport-card-back">
-              <h3>Wywrotki</h3>
-              <p>Naczepy samowyładowcze do materiałów sypkich, owoców i warzyw. Szybki rozładunek na miejscu.</p>
+              <h3 data-i18n="serviceTippersTitle">Wywrotki</h3>
+              <p data-i18n="serviceTippersDesc">Naczepy samowyładowcze do materiałów sypkich, owoców i warzyw. Szybki rozładunek na miejscu.</p>
             </div>
           </div>
         </article>
@@ -138,12 +138,12 @@
         <article id="mega" class="transport-card">
           <div class="transport-card-inner">
             <div class="transport-card-front">
-              <img src="assets/mega.png" alt="Naczepy MEGA MIGRO" />
-              <h3>Naczepy MEGA</h3>
+              <img src="mega-bez-tla.png" alt="Naczepy MEGA MIGRO" />
+              <h3 data-i18n="serviceMegaTitle">Naczepy MEGA</h3>
             </div>
             <div class="transport-card-back">
-              <h3>Naczepy MEGA</h3>
-              <p>Zwiększona przestrzeń ładunkowa. Idealne do lekkich, objętościowych towarów wymagających więcej miejsca.</p>
+              <h3 data-i18n="serviceMegaTitle">Naczepy MEGA</h3>
+              <p data-i18n="serviceMegaDesc">Zwiększona przestrzeń ładunkowa. Idealne do lekkich, objętościowych towarów wymagających więcej miejsca.</p>
             </div>
           </div>
         </article>
@@ -185,33 +185,33 @@
 
         <!-- Services Column -->
         <div class="footer-column">
-          <h3>Usługi</h3>
+          <h3 data-i18n="footerServices">Usługi</h3>
           <ul>
-            <li><a href="/services.html#kontenery">Kontenery</a></li>
-            <li><a href="/services.html#plandeki">Plandeki</a></li>
-            <li><a href="/services.html#chlodnie">Chłodnie</a></li>
-            <li><a href="/services.html#wywrotki">Wywrotki</a></li>
-            <li><a href="/services.html#mega">Naczepy MEGA</a></li>
+            <li><a href="/services.html#kontenery" data-i18n="serviceContainersTitle">Kontenery</a></li>
+            <li><a href="/services.html#plandeki" data-i18n="serviceTarpaulinsTitle">Plandeki</a></li>
+            <li><a href="/services.html#chlodnie" data-i18n="serviceRefrigeratedTitle">Chłodnie</a></li>
+            <li><a href="/services.html#wywrotki" data-i18n="serviceTippersTitle">Wywrotki</a></li>
+            <li><a href="/services.html#mega" data-i18n="serviceMegaTitle">Naczepy MEGA</a></li>
           </ul>
         </div>
 
         <!-- Company Column -->
         <div class="footer-column">
-          <h3>Firma</h3>
+          <h3 data-i18n="footerCompany">Firma</h3>
           <ul>
             <li><a href="/about.html#o-nas" data-i18n="navAboutUs">O nas</a></li>
-            <li><a href="/documents.html">Dokumenty</a></li>
+            <li><a href="/documents.html" data-i18n="navDocuments">Dokumenty</a></li>
             <li><a href="/about.html#nasze-wartosci" data-i18n="navOurValues">Nasze wartości</a></li>
             <li><a href="/about.html#nasze-doswiadczenie" data-i18n="navOurExperience">Nasze doświadczenie</a></li>
-            <li><a href="/carrier.html">Dla przewoźnika</a></li>
+            <li><a href="/carrier.html" data-i18n="navCarrier">Dla przewoźnika</a></li>
           </ul>
         </div>
 
         <!-- Legal Column -->
         <div class="footer-column">
-          <h3>Informacje</h3>
+          <h3 data-i18n="footerInfo">Informacje</h3>
           <ul>
-            <li><a href="/contact.html">Kontakt</a></li>
+            <li><a href="/contact.html" data-i18n="navContact">Kontakt</a></li>
           </ul>
           <div class="footer-social">
             <a href="https://www.linkedin.com/company/migro-mikołaj-gros/?viewAsMember=true" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
@@ -224,7 +224,7 @@
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; <span id="year"></span> MIGRO Mikołaj Gros. Wszelkie prawa zastrzeżone.</p>
+        <p>&copy; <span id="year"></span> MIGRO Mikołaj Gros. <span data-i18n="footerAllRights">Wszelkie prawa zastrzeżone.</span></p>
       </div>
     </div>
   </footer>

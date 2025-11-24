@@ -117,8 +117,39 @@
       // Footer
       footerText: 'MIGRO · Profesjonalny transport międzynarodowy',
       footerServices: 'Usługi',
+      footerCompany: 'Firma',
       footerAbout: 'O nas',
       footerContact: 'Kontakt',
+      footerInfo: 'Informacje',
+      footerAllRights: 'Wszelkie prawa zastrzeżone.',
+      navDocuments: 'Dokumenty',
+      
+      // Brand
+      brandText: 'MIGRO Spedycja',
+      
+      // Services page content
+      servicesHeroTitle: '<span class="highlight-blue">Dowozimy Twoje ładunki</span> wszędzie, gdzie trzeba!',
+      servicesHeroDesc: 'Wychodzimy z założenia, że nie ma rzeczy niemożliwych.<br>Transportujemy prawie wszystko — od kontenerów morskich, przez ładunki paletowe i chłodnicze, po owoce i warzywa na wywrotkach.<br>Dopasowujemy środek transportu, planujemy trasę i dbamy o terminowość na każdym etapie.<br>Ty mówisz co, gdzie i kiedy — my zajmujemy się resztą.',
+      serviceContainersTitle: 'Kontenery',
+      serviceContainersDesc: 'Kontenery morskie o różnych rozmiarach. Idealne do transportu międzynarodowego i ładunków wielkogabarytowych.',
+      serviceTarpaulinsTitle: 'Plandeki',
+      serviceTarpaulinsDesc: 'Uniwersalne naczepy plandekowe. Szybki załadunek i rozładunek, idealne do ładunków paletowych.',
+      serviceRefrigeratedTitle: 'Chłodnie',
+      serviceRefrigeratedDesc: 'Transport chłodniczy z kontrolą temperatury. Świeże produkty, owoce i warzywa w doskonałym stanie.',
+      serviceTippersTitle: 'Wywrotki',
+      serviceTippersDesc: 'Naczepy samowyładowcze do materiałów sypkich, owoców i warzyw. Szybki rozładunek na miejscu.',
+      serviceMegaTitle: 'Naczepy MEGA',
+      serviceMegaDesc: 'Zwiększona przestrzeń ładunkowa. Idealne do lekkich, objętościowych towarów wymagających więcej miejsca.',
+      
+      // Documents page
+      documentsTitle: 'Dokumenty',
+      documentsDesc: 'Ważne informacje i dokumenty dotyczące działalności MIGRO',
+      documentsCompanyDocs: 'Dokumenty firmowe',
+      documentsPageInProgress: 'Strona w przygotowaniu. Wkrótce znajdziesz tutaj wszystkie niezbędne dokumenty.',
+      documentsPrivacyPolicy: 'Polityka prywatności',
+      documentsRegulations: 'Regulamin',
+      documentsInProgress: 'W przygotowaniu',
+      documentsQuestions: 'Masz pytania? Skontaktuj się z nami',
     },
     en: {
       // Navigation
@@ -230,8 +261,39 @@
       // Footer
       footerText: 'MIGRO · Professional international transport',
       footerServices: 'Services',
+      footerCompany: 'Company',
       footerAbout: 'About Us',
       footerContact: 'Contact',
+      footerInfo: 'Information',
+      footerAllRights: 'All rights reserved.',
+      navDocuments: 'Documents',
+      
+      // Brand
+      brandText: 'MIGRO Freight',
+      
+      // Services page content
+      servicesHeroTitle: '<span class="highlight-blue">We deliver your cargo</span> wherever it needs to go!',
+      servicesHeroDesc: 'We believe that nothing is impossible.<br>We transport almost everything — from sea containers, palletized and refrigerated loads, to fruits and vegetables in tipper trucks.<br>We match the right transport, plan the route and ensure punctuality at every stage.<br>You tell us what, where and when — we take care of the rest.',
+      serviceContainersTitle: 'Containers',
+      serviceContainersDesc: 'Sea containers of various sizes. Ideal for international transport and oversized cargo.',
+      serviceTarpaulinsTitle: 'Tarpaulins',
+      serviceTarpaulinsDesc: 'Universal tarpaulin trailers. Quick loading and unloading, ideal for palletized cargo.',
+      serviceRefrigeratedTitle: 'Refrigerated',
+      serviceRefrigeratedDesc: 'Refrigerated transport with temperature control. Fresh products, fruits and vegetables in perfect condition.',
+      serviceTippersTitle: 'Tippers',
+      serviceTippersDesc: 'Self-unloading trailers for bulk materials, fruits and vegetables. Quick unloading on site.',
+      serviceMegaTitle: 'MEGA Trailers',
+      serviceMegaDesc: 'Increased cargo space. Ideal for light, voluminous goods requiring more space.',
+      
+      // Documents page
+      documentsTitle: 'Documents',
+      documentsDesc: 'Important information and documents regarding MIGRO operations',
+      documentsCompanyDocs: 'Company Documents',
+      documentsPageInProgress: 'Page under construction. You will find all necessary documents here soon.',
+      documentsPrivacyPolicy: 'Privacy Policy',
+      documentsRegulations: 'Terms & Conditions',
+      documentsInProgress: 'Coming soon',
+      documentsQuestions: 'Have questions? Contact us',
     }
   };
 
