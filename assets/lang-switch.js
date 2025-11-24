@@ -100,6 +100,11 @@
       carrierOffer3Title: 'Terminowe płatności',
       carrierOffer3Desc: 'Gwarantujemy terminowe rozliczenia i konkurencyjne stawki za wykonane przewozy',
       carrierCtaContact: 'Skontaktuj się z nami',
+      carrierLookingForTitle: 'Kogo aktualnie szukamy?',
+      carrierLookingForMega: 'Przewoźników z naczepą MEGA',
+      carrierLookingForDesc: 'Dołącz do zespołu profesjonalistów i wykorzystaj pełny potencjał swojej floty',
+      carrierLookingForOffer: '<strong style="font-size: 1.3rem;">Oferujemy:</strong><br>Regularne zlecenia • Atrakcyjne stawki • Profesjonalne wsparcie logistyczne • Terminowe płatności',
+      carrierApplyNow: 'Aplikuj już teraz!',
       
       // Contact page
       contactTitle: 'Kontakt',
@@ -250,6 +255,11 @@
       carrierOffer3Title: 'Timely Payments',
       carrierOffer3Desc: 'We guarantee timely settlements and competitive rates for completed transports',
       carrierCtaContact: 'Contact us',
+      carrierLookingForTitle: 'Who are we currently looking for?',
+      carrierLookingForMega: 'Carriers with MEGA trailers',
+      carrierLookingForDesc: 'Join our team of professionals and unlock the full potential of your fleet',
+      carrierLookingForOffer: '<strong style="font-size: 1.3rem;">We offer:</strong><br>Regular orders • Attractive rates • Professional logistics support • Timely payments',
+      carrierApplyNow: 'Apply now!',
       
       // Contact page
       contactTitle: 'Contact',
