@@ -378,8 +378,12 @@
         }
       });
       
-      // Handle keyboard interaction
+      // Handle keyboard interaction on card (not on CTA links)
       card.addEventListener('keydown', function(e) {
+        // Skip if the event target is the CTA link
+        if (e.target.closest('.service-card__cta')) {
+          return;
+        }
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault(); // Prevent page scroll for space key
           card.classList.toggle('service-card--active');
