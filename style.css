@@ -823,8 +823,8 @@ input:focus, select:focus, textarea:focus{
 
 .contact-logo {
   margin: 0 auto var(--space);
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -832,15 +832,9 @@ input:focus, select:focus, textarea:focus{
 
 .contact-header h2 {
   color: var(--contrast);
-  margin: 0 0 8px 0;
+  margin: 0;
   font-size: 1.8rem;
   font-weight: 700;
-}
-
-.company-owner {
-  color: var(--muted);
-  font-size: 1.1rem;
-  margin: 0;
 }
 
 .contact-info {
