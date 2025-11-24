@@ -823,8 +823,8 @@ input:focus, select:focus, textarea:focus{
 
 .contact-logo {
   margin: 0 auto var(--space);
-  width: 80px;
-  height: 80px;
+  width: 120px;
+  height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -832,6 +832,14 @@ input:focus, select:focus, textarea:focus{
 
 .contact-header h2 {
   color: var(--contrast);
+  margin: 0 0 8px 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.company-owner {
+  color: var(--muted);
+  font-size: 1.1rem;
   margin: 0;
 }
 
@@ -902,22 +910,25 @@ input:focus, select:focus, textarea:focus{
   color: var(--contrast);
 }
 
-.contact-emergency {
+.contact-support {
   font-size: 0.9rem;
   color: var(--brand-primary);
   font-weight: 600;
 }
 
-.contact-map {
+.contact-bottom-image {
   margin-top: var(--space-md);
+  text-align: center;
+  padding: var(--space);
+  background: linear-gradient(135deg, rgba(0,102,255,0.03), rgba(0,204,255,0.03));
   border-radius: 12px;
-  overflow: hidden;
 }
 
-.contact-map img {
+.contact-bottom-image img {
   width: 100%;
+  max-width: 300px;
   height: auto;
-  display: block;
+  display: inline-block;
 }
 
 /* Section title styling */
