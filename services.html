@@ -344,10 +344,15 @@
       return touchMediaQuery.matches;
     }
     
+    function updateCardAriaState(card) {
+      const isActive = card.classList.contains('service-card--active');
+      card.setAttribute('aria-expanded', String(isActive));
+    }
+    
     serviceCards.forEach(function(card) {
-      // Add keyboard accessibility
+      // Add keyboard accessibility with expandable semantics
       card.setAttribute('tabindex', '0');
-      card.setAttribute('role', 'button');
+      card.setAttribute('aria-expanded', 'false');
       
       card.addEventListener('click', function(e) {
         // Don't toggle if clicking the CTA link
@@ -363,21 +368,22 @@
           serviceCards.forEach(function(otherCard) {
             if (otherCard !== card) {
               otherCard.classList.remove('service-card--active');
+              updateCardAriaState(otherCard);
             }
           });
           
           // Toggle this card
           card.classList.toggle('service-card--active');
+          updateCardAriaState(card);
         }
       });
       
       // Handle keyboard interaction
       card.addEventListener('keydown', function(e) {
-        if (e.key === ' ') {
-          e.preventDefault(); // Prevent page scroll
-        }
         if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault(); // Prevent page scroll for space key
           card.classList.toggle('service-card--active');
+          updateCardAriaState(card);
         }
       });
     });
