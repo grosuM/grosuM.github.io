@@ -1012,7 +1012,7 @@ input:focus, select:focus, textarea:focus{
   }
 }
 
-/* Service Card - Modern Premium Design */
+/* Service Card - Modern Premium Design with Reveal */
 .service-card {
   display: block;
   text-decoration: none;
@@ -1030,6 +1030,7 @@ input:focus, select:focus, textarea:focus{
   position: relative;
   overflow: hidden;
   scroll-margin-top: var(--scroll-offset);
+  cursor: pointer;
 }
 
 .service-card::before {
@@ -1044,7 +1045,8 @@ input:focus, select:focus, textarea:focus{
   transition: opacity var(--transition);
 }
 
-.service-card:hover {
+.service-card:hover,
+.service-card.service-card--active {
   transform: translateY(-8px);
   box-shadow: 
     0 12px 24px rgba(0, 0, 0, 0.08),
@@ -1052,13 +1054,26 @@ input:focus, select:focus, textarea:focus{
   border-color: var(--brand-primary);
 }
 
-.service-card:hover::before {
+.service-card:hover::before,
+.service-card.service-card--active::before {
   opacity: 1;
 }
 
-.service-card:focus {
+.service-card:focus-visible {
   outline: 3px solid var(--brand-primary);
   outline-offset: 2px;
+}
+
+.service-card:focus-visible .service-card__summary {
+  opacity: 0;
+  max-height: 0;
+  margin-bottom: 0;
+}
+
+.service-card:focus-visible .service-card__reveal {
+  max-height: 200px;
+  opacity: 1;
+  margin-top: var(--space-sm);
 }
 
 .service-card__content {
@@ -1089,7 +1104,8 @@ input:focus, select:focus, textarea:focus{
   transition: transform var(--transition);
 }
 
-.service-card:hover .service-card__image img {
+.service-card:hover .service-card__image img,
+.service-card.service-card--active .service-card__image img {
   transform: scale(1.08);
 }
 
@@ -1097,7 +1113,7 @@ input:focus, select:focus, textarea:focus{
   font-size: 1.25rem;
   font-weight: 800;
   color: var(--contrast);
-  margin: 0 0 var(--space-sm) 0;
+  margin: 0 0 var(--space-xs) 0;
   background: linear-gradient(135deg, var(--brand-primary), var(--accent));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1105,12 +1121,59 @@ input:focus, select:focus, textarea:focus{
   letter-spacing: -0.02em;
 }
 
+/* Summary - visible by default */
+.service-card__summary {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 0 0 var(--space-sm) 0;
+  transition: opacity var(--transition), max-height var(--transition);
+  max-height: 60px;
+  overflow: hidden;
+}
+
+/* Reveal container - hidden by default */
+.service-card__reveal {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height var(--transition), opacity var(--transition), margin var(--transition);
+  margin-top: 0;
+}
+
+/* Show reveal on hover (desktop) */
+@media (hover: hover) {
+  .service-card:hover .service-card__summary {
+    opacity: 0;
+    max-height: 0;
+    margin-bottom: 0;
+  }
+  
+  .service-card:hover .service-card__reveal {
+    max-height: 200px;
+    opacity: 1;
+    margin-top: var(--space-sm);
+  }
+}
+
+/* Show reveal when active (mobile tap) */
+.service-card.service-card--active .service-card__summary {
+  opacity: 0;
+  max-height: 0;
+  margin-bottom: 0;
+}
+
+.service-card.service-card--active .service-card__reveal {
+  max-height: 200px;
+  opacity: 1;
+  margin-top: var(--space-sm);
+}
+
 .service-card__desc {
   font-size: 0.9rem;
   color: var(--muted);
   line-height: 1.6;
   margin: 0 0 var(--space) 0;
-  flex-grow: 1;
 }
 
 .service-card__cta {
@@ -1123,13 +1186,14 @@ input:focus, select:focus, textarea:focus{
   font-size: 0.85rem;
   font-weight: 700;
   border-radius: 999px;
+  text-decoration: none;
   transition: 
     transform var(--transition-fast),
     box-shadow var(--transition);
   box-shadow: 0 4px 12px rgba(0, 102, 255, 0.25);
 }
 
-.service-card:hover .service-card__cta {
+.service-card__cta:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 20px rgba(0, 102, 255, 0.35);
 }
@@ -1151,6 +1215,10 @@ input:focus, select:focus, textarea:focus{
   
   .service-card__title {
     font-size: 1.15rem;
+  }
+  
+  .service-card__summary {
+    font-size: 0.85rem;
   }
   
   .service-card__desc {
@@ -1184,6 +1252,10 @@ input:focus, select:focus, textarea:focus{
   
   .service-card__title {
     font-size: 1.35rem;
+  }
+  
+  .service-card__summary {
+    font-size: 0.9rem;
   }
   
   .service-card__desc {
