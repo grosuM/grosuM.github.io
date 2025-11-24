@@ -9,7 +9,7 @@
   const translations = {
     pl: {
       // Navigation
-      navAbout: 'O nas',
+      navAbout: 'Firma',
       navAboutUs: 'O nas',
       navOurValues: 'Nasze wartości',
       navOurExperience: 'Nasze doświadczenie',
@@ -122,7 +122,7 @@
     },
     en: {
       // Navigation
-      navAbout: 'About Us',
+      navAbout: 'Company',
       navAboutUs: 'About Us',
       navOurValues: 'Our Values',
       navOurExperience: 'Our Experience',
