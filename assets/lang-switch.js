@@ -22,7 +22,7 @@
       
       // Index page
       heroTitle: 'MIGRO<br>Twój partner w transporcie i logistyce.',
-      heroSub: 'Kompleksowa obsługa transportu dla firm i przewoźników. Przejrzyście, szybko, bez zbędnych formalności.',
+      heroSub: 'Kompleksowa obsługa transportu dla firm i przewoźników.<br>Przejrzyście, szybko, bez zbędnych formalności.',
       ctaQuote: 'Bezpłatna wycena',
       ctaServices: 'Zobacz usługi',
       trust1: 'Profesjonalne wsparcie',
@@ -47,15 +47,15 @@
       aboutHeroDesc: 'Zapewniamy kompleksowe usługi transportowe z pasją i zaangażowaniem',
       aboutMissionTitle: 'O nas',
       aboutMissionDesc: 'Jesteśmy firmą specjalizującą się w organizacji transportu kontenerowego, plandekowego, chłodniczego oraz wywrotek. Pracujemy zarówno z przewoźnikami, jak i firmami, które potrzebują pewnych i terminowych dostaw.',
-      aboutMissionDesc2: 'Naszą rolą jest dopasowanie odpowiedniego środka transportu, zaplanowanie trasy oraz czuwanie nad realizacją zlecenia — od pierwszego kontaktu aż po dostarczenie ładunku do miejsca docelowego.',
-      aboutMissionDesc3: 'Stawiamy na komunikację, przejrzyste warunki i partnerskie podejście. Nie obiecujemy „niemożliwego" — po prostu dowozimy to, co ustalamy.',
+      aboutMissionDesc2: 'Naszą rolą jest dopasowanie odpowiedniego środka transportu, zaplanowanie trasy oraz czuwanie nad realizacją zlecenia od pierwszego kontaktu aż po dostarczenie ładunku do miejsca docelowego.',
+      aboutMissionDesc3: 'Stawiamy na komunikację, przejrzyste warunki i partnerskie podejście. Nie obiecujemy „niemożliwego" po prostu dowozimy to, co ustalamy.',
       aboutValuesTitle: 'Nasze wartości',
       aboutValue1: 'Rzetelność i terminowość',
       aboutValue2: 'Bezpieczeństwo przewożonych ładunków',
       aboutValue3: 'Partnerskie relacje z klientami',
       aboutValue4: 'Ciągły rozwój i innowacje',
       aboutExperienceTitle: 'Nasze doświadczenie',
-      aboutExperienceDesc: 'Choć jesteśmy młodą firmą na rynku, nasze doświadczenie wynika z wieloletniej pracy w branży transportowej i logistycznej. Zbudowaliśmy sieć sprawdzonych przewoźników, z którymi współpracujemy na co dzień — dzięki temu jesteśmy w stanie szybko reagować, dobierać właściwe rozwiązania i gwarantować terminowość.',
+      aboutExperienceDesc: 'Choć jesteśmy młodą firmą na rynku, nasze doświadczenie wynika z wieloletniej pracy w branży transportowej i logistycznej. Zbudowaliśmy sieć sprawdzonych przewoźników, z którymi współpracujemy na co dzień, dzięki temu jesteśmy w stanie szybko reagować, dobierać właściwe rozwiązania i gwarantować terminowość.',
       aboutExperienceDesc2: 'Naszą przewagą jest elastyczność i osobiste podejście do każdego zlecenia.',
       aboutStat1: 'Zrealizowanych zleceń',
       aboutStat2: 'Partnerów biznesowych',
@@ -135,7 +135,7 @@
       
       // Services page content
       servicesHeroTitle: '<span class="highlight-blue">Dowozimy Twoje ładunki</span> wszędzie, gdzie trzeba!',
-      servicesHeroDesc: 'Wychodzimy z założenia, że nie ma rzeczy niemożliwych.<br>Transportujemy prawie wszystko — od kontenerów morskich, przez ładunki paletowe i chłodnicze, po owoce i warzywa na wywrotkach.<br>Dopasowujemy środek transportu, planujemy trasę i dbamy o terminowość na każdym etapie.<br>Ty mówisz co, gdzie i kiedy — my zajmujemy się resztą.',
+      servicesHeroDesc: 'Wychodzimy z założenia, że nie ma rzeczy niemożliwych.<br>Zapewniamy transport od kontenerów morskich, przez ładunki paletowe i chłodnicze, po owoce i warzywa na wywrotkach.<br>Dopasowujemy środek transportu, planujemy trasę i dbamy o terminowość na każdym etapie.<br>Ty mówisz co, gdzie i kiedy, my zajmujemy się resztą.',
       serviceContainersTitle: 'Kontenery',
       serviceContainersDesc: 'Kontenery morskie o różnych rozmiarach. Idealne do transportu międzynarodowego i ładunków wielkogabarytowych.',
       serviceContainersSummary: 'Niezawodny transport kontenerów morskich w całej Europie',
@@ -177,7 +177,7 @@
       
       // Index page
       heroTitle: 'MIGRO<br>Your transport and logistics partner.',
-      heroSub: 'Comprehensive transport services for companies and carriers. Transparent, fast, without unnecessary formalities.',
+      heroSub: 'Comprehensive transport services for companies and carriers.<br>Transparent, fast, without unnecessary formalities.',
       ctaQuote: 'Free quote',
       ctaServices: 'See services',
       trust1: 'Professional Support',
@@ -202,15 +202,15 @@
       aboutHeroDesc: 'We provide comprehensive transport services with passion and commitment',
       aboutMissionTitle: 'About Us',
       aboutMissionDesc: 'We are a company specializing in organizing container, tarpaulin, refrigerated and dump truck transport. We work with both carriers and companies that need reliable and timely deliveries.',
-      aboutMissionDesc2: 'Our role is to match the appropriate means of transport, plan the route and oversee the implementation of the order — from the first contact to the delivery of the cargo to the destination.',
-      aboutMissionDesc3: 'We focus on communication, transparent terms and a partnership approach. We don\'t promise the "impossible" — we simply deliver what we agree on.',
+      aboutMissionDesc2: 'Our role is to match the appropriate means of transport, plan the route and oversee the implementation of the order from the first contact to the delivery of the cargo to the destination.',
+      aboutMissionDesc3: 'We focus on communication, transparent terms and a partnership approach. We don\'t promise the "impossible" we simply deliver what we agree on.',
       aboutValuesTitle: 'Our Values',
       aboutValue1: 'Reliability and timeliness',
       aboutValue2: 'Safety of transported cargo',
       aboutValue3: 'Partnership relations with clients',
       aboutValue4: 'Continuous development and innovation',
       aboutExperienceTitle: 'Our Experience',
-      aboutExperienceDesc: 'Although we are a young company on the market, our experience comes from many years of work in the transport and logistics industry. We have built a network of proven carriers with whom we cooperate on a daily basis — thanks to this, we are able to react quickly, select the right solutions and guarantee timeliness.',
+      aboutExperienceDesc: 'Although we are a young company on the market, our experience comes from many years of work in the transport and logistics industry. We have built a network of proven carriers with whom we cooperate on a daily basis, thanks to this, we are able to react quickly, select the right solutions and guarantee timeliness.',
       aboutExperienceDesc2: 'Our advantage is flexibility and a personal approach to each order.',
       aboutStat1: 'Completed orders',
       aboutStat2: 'Business partners',
@@ -290,7 +290,7 @@
       
       // Services page content
       servicesHeroTitle: '<span class="highlight-blue">We deliver your cargo</span> wherever it needs to go!',
-      servicesHeroDesc: 'We believe that nothing is impossible.<br>We transport almost everything — from sea containers, palletized and refrigerated loads, to fruits and vegetables in tipper trucks.<br>We match the right transport, plan the route and ensure punctuality at every stage.<br>You tell us what, where and when — we take care of the rest.',
+      servicesHeroDesc: 'We believe that nothing is impossible.<br>We provide transport from sea containers, palletized and refrigerated loads, to fruits and vegetables in tipper trucks.<br>We match the right transport, plan the route and ensure punctuality at every stage.<br>You tell us what, where and when, we take care of the rest.',
       serviceContainersTitle: 'Containers',
       serviceContainersDesc: 'Sea containers of various sizes. Ideal for international transport and oversized cargo.',
       serviceContainersSummary: 'Reliable sea container transport across Europe',

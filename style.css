@@ -1082,6 +1082,7 @@ input:focus, select:focus, textarea:focus{
   align-items: center;
   text-align: center;
   height: 100%;
+  justify-content: space-between;
 }
 
 .service-card__image {
@@ -1173,7 +1174,7 @@ input:focus, select:focus, textarea:focus{
   font-size: 0.9rem;
   color: var(--muted);
   line-height: 1.6;
-  margin: 0 0 var(--space) 0;
+  margin: 0;
 }
 
 .service-card__cta {
@@ -1191,6 +1192,8 @@ input:focus, select:focus, textarea:focus{
     transform var(--transition-fast),
     box-shadow var(--transition);
   box-shadow: 0 4px 12px rgba(0, 102, 255, 0.25);
+  margin-top: auto;
+  flex-shrink: 0;
 }
 
 .service-card__cta:hover {
