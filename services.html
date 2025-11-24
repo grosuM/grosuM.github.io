@@ -354,6 +354,11 @@
       card.setAttribute('tabindex', '0');
       card.setAttribute('aria-expanded', 'false');
       
+      // Get the title for aria-label
+      var titleElement = card.querySelector('.service-card__title');
+      var title = titleElement ? titleElement.textContent : 'Service';
+      card.setAttribute('aria-label', title + ' - click to expand details');
+      
       card.addEventListener('click', function(e) {
         // Don't toggle if clicking the CTA link
         if (e.target.closest('.service-card__cta')) {
