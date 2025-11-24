@@ -378,16 +378,24 @@
         }
       });
       
-      // Handle keyboard interaction on card (not on CTA links)
+      // Handle keyboard interaction
       card.addEventListener('keydown', function(e) {
-        // Skip if the event target is the CTA link
-        if (e.target.closest('.service-card__cta')) {
-          return;
-        }
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault(); // Prevent page scroll for space key
           card.classList.toggle('service-card--active');
           updateCardAriaState(card);
+        }
+      });
+      
+      // Sync aria-expanded with focus state (matches CSS :focus-visible reveal)
+      card.addEventListener('focus', function() {
+        card.setAttribute('aria-expanded', 'true');
+      });
+      
+      card.addEventListener('blur', function() {
+        // Only reset if not in active state
+        if (!card.classList.contains('service-card--active')) {
+          card.setAttribute('aria-expanded', 'false');
         }
       });
     });
