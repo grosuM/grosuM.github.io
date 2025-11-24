@@ -26,6 +26,9 @@
 
   --transition-fast: 160ms;
   --transition: 260ms;
+
+  --header-height: 80px;
+  --scroll-offset: 100px;
 }
 
 *,
@@ -1005,7 +1008,7 @@ input:focus, select:focus, textarea:focus{
 @media(min-width:1100px){
   .services-cards-row {
     grid-template-columns: repeat(5, 1fr);
-    gap: var(--space);
+    gap: var(--space-md);
   }
 }
 
@@ -1026,7 +1029,7 @@ input:focus, select:focus, textarea:focus{
     border-color var(--transition);
   position: relative;
   overflow: hidden;
-  scroll-margin-top: 100px;
+  scroll-margin-top: var(--scroll-offset);
 }
 
 .service-card::before {
