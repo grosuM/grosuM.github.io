@@ -22,7 +22,7 @@
       
       // Index page
       heroTitle: 'MIGRO<br>Twój partner w transporcie i logistyce.',
-      heroSub: 'Kompleksowa obsługa transportu dla firm i przewoźników - przejrzyście, szybko, bez zbędnych formalności.',
+      heroSub: 'Kompleksowa obsługa transportu dla firm i przewoźników. Przejrzyście, szybko, bez zbędnych formalności.',
       ctaQuote: 'Bezpłatna wycena',
       ctaServices: 'Zobacz usługi',
       trust1: 'Profesjonalne wsparcie',
@@ -108,7 +108,7 @@
       
       // Contact page
       contactTitle: 'Kontakt',
-      contactLead: 'Skontaktuj się z nami - odpowiemy w ciągu jednego dnia roboczego',
+      contactLead: 'Skontaktuj się z nami. Odpowiemy w ciągu jednego dnia roboczego',
       contactInfoTitle: 'Dane kontaktowe',
       contactName: 'Twoje imię i nazwisko',
       contactEmail: 'Email',
@@ -177,7 +177,7 @@
       
       // Index page
       heroTitle: 'MIGRO<br>Your transport and logistics partner.',
-      heroSub: 'Comprehensive transport services for companies and carriers - transparent, fast, without unnecessary formalities.',
+      heroSub: 'Comprehensive transport services for companies and carriers. Transparent, fast, without unnecessary formalities.',
       ctaQuote: 'Free quote',
       ctaServices: 'See services',
       trust1: 'Professional Support',
@@ -263,7 +263,7 @@
       
       // Contact page
       contactTitle: 'Contact',
-      contactLead: 'Get in touch - we typically respond within one business day',
+      contactLead: 'Get in touch. We typically respond within one business day',
       contactInfoTitle: 'Contact Information',
       contactName: 'Your Name',
       contactEmail: 'Email',
@@ -282,11 +282,11 @@
       footerContact: 'Contact',
       footerInfo: 'Information',
       footerAllRights: 'All rights reserved.',
-      footerDescription: 'Professional international transport. Containers, tarpaulins, refrigerated, tippers, MEGA trailers.',
+      footerDescription: 'Professional international transport. Containers, curtain, refrigerated, tippers, MEGA trailers.',
       navDocuments: 'Documents',
       
       // Brand
-      brandText: 'MIGRO Freight',
+      brandText: 'MIGRO Shipping Company',
       
       // Services page content
       servicesHeroTitle: '<span class="highlight-blue">We deliver your cargo</span> wherever it needs to go!',
@@ -294,8 +294,8 @@
       serviceContainersTitle: 'Containers',
       serviceContainersDesc: 'Sea containers of various sizes. Ideal for international transport and oversized cargo.',
       serviceContainersSummary: 'Reliable sea container transport across Europe',
-      serviceTarpaulinsTitle: 'Tarpaulins',
-      serviceTarpaulinsDesc: 'Universal tarpaulin trailers. Quick loading and unloading, ideal for palletized cargo.',
+      serviceTarpaulinsTitle: 'Curtain',
+      serviceTarpaulinsDesc: 'Universal curtain trailers. Quick loading and unloading, ideal for palletized cargo.',
       serviceTarpaulinsSummary: 'Flexible solutions for palletized cargo',
       serviceRefrigeratedTitle: 'Refrigerated',
       serviceRefrigeratedDesc: 'Refrigerated transport with temperature control. Fresh products, fruits and vegetables in perfect condition.',
