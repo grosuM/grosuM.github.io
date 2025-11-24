@@ -122,6 +122,7 @@
       footerContact: 'Kontakt',
       footerInfo: 'Informacje',
       footerAllRights: 'Wszelkie prawa zastrzeżone.',
+      footerDescription: 'Profesjonalny transport międzynarodowy. Kontenery, plandeki, chłodnie, wywrotki, naczepy MEGA.',
       navDocuments: 'Dokumenty',
       
       // Brand
@@ -132,14 +133,19 @@
       servicesHeroDesc: 'Wychodzimy z założenia, że nie ma rzeczy niemożliwych.<br>Transportujemy prawie wszystko — od kontenerów morskich, przez ładunki paletowe i chłodnicze, po owoce i warzywa na wywrotkach.<br>Dopasowujemy środek transportu, planujemy trasę i dbamy o terminowość na każdym etapie.<br>Ty mówisz co, gdzie i kiedy — my zajmujemy się resztą.',
       serviceContainersTitle: 'Kontenery',
       serviceContainersDesc: 'Kontenery morskie o różnych rozmiarach. Idealne do transportu międzynarodowego i ładunków wielkogabarytowych.',
+      serviceContainersSummary: 'Niezawodny transport kontenerów morskich w całej Europie',
       serviceTarpaulinsTitle: 'Plandeki',
       serviceTarpaulinsDesc: 'Uniwersalne naczepy plandekowe. Szybki załadunek i rozładunek, idealne do ładunków paletowych.',
+      serviceTarpaulinsSummary: 'Elastyczne rozwiązania dla ładunków paletowych',
       serviceRefrigeratedTitle: 'Chłodnie',
       serviceRefrigeratedDesc: 'Transport chłodniczy z kontrolą temperatury. Świeże produkty, owoce i warzywa w doskonałym stanie.',
+      serviceRefrigeratedSummary: 'Kontrolowana temperatura dla świeżych produktów',
       serviceTippersTitle: 'Wywrotki',
       serviceTippersDesc: 'Naczepy samowyładowcze do materiałów sypkich, owoców i warzyw. Szybki rozładunek na miejscu.',
+      serviceTippersSummary: 'Szybki transport materiałów sypkich',
       serviceMegaTitle: 'Naczepy MEGA',
       serviceMegaDesc: 'Zwiększona przestrzeń ładunkowa. Idealne do lekkich, objętościowych towarów wymagających więcej miejsca.',
+      serviceMegaSummary: 'Maksymalna pojemność dla lekkich ładunków',
       
       // Documents page
       documentsTitle: 'Dokumenty',
@@ -266,6 +272,7 @@
       footerContact: 'Contact',
       footerInfo: 'Information',
       footerAllRights: 'All rights reserved.',
+      footerDescription: 'Professional international transport. Containers, tarpaulins, refrigerated, tippers, MEGA trailers.',
       navDocuments: 'Documents',
       
       // Brand
@@ -276,14 +283,19 @@
       servicesHeroDesc: 'We believe that nothing is impossible.<br>We transport almost everything — from sea containers, palletized and refrigerated loads, to fruits and vegetables in tipper trucks.<br>We match the right transport, plan the route and ensure punctuality at every stage.<br>You tell us what, where and when — we take care of the rest.',
       serviceContainersTitle: 'Containers',
       serviceContainersDesc: 'Sea containers of various sizes. Ideal for international transport and oversized cargo.',
+      serviceContainersSummary: 'Reliable sea container transport across Europe',
       serviceTarpaulinsTitle: 'Tarpaulins',
       serviceTarpaulinsDesc: 'Universal tarpaulin trailers. Quick loading and unloading, ideal for palletized cargo.',
+      serviceTarpaulinsSummary: 'Flexible solutions for palletized cargo',
       serviceRefrigeratedTitle: 'Refrigerated',
       serviceRefrigeratedDesc: 'Refrigerated transport with temperature control. Fresh products, fruits and vegetables in perfect condition.',
+      serviceRefrigeratedSummary: 'Temperature-controlled transport for fresh products',
       serviceTippersTitle: 'Tippers',
       serviceTippersDesc: 'Self-unloading trailers for bulk materials, fruits and vegetables. Quick unloading on site.',
+      serviceTippersSummary: 'Fast transport of bulk materials',
       serviceMegaTitle: 'MEGA Trailers',
       serviceMegaDesc: 'Increased cargo space. Ideal for light, voluminous goods requiring more space.',
+      serviceMegaSummary: 'Maximum capacity for lightweight cargo',
       
       // Documents page
       documentsTitle: 'Documents',
