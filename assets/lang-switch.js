@@ -327,14 +327,6 @@
     updateLangButton();
   }
 
-  // Allowlisted HTML patterns that are safe to use in translations
-  // These are strictly controlled and only match specific patterns we use
-  const SAFE_PATTERNS = {
-    br: /<br\s*\/?>/gi,
-    spanHighlight: /<span class="highlight-blue">([^<]*)<\/span>/gi,
-    strongSize: /<strong style="font-size:\s*\d+(?:\.\d+)?rem;">([^<]*)<\/strong>/gi
-  };
-
   // Sanitize HTML content using strict allowlist approach
   function sanitizeHtml(html) {
     // First, escape all HTML to prevent any injection
@@ -346,13 +338,14 @@
       .replace(/'/g, '&#039;');
     
     // Then, selectively restore only our known safe patterns
+    // Using [^<]* to prevent nested HTML tags within restored elements
     let result = escaped
       // Restore <br> and <br/> tags
       .replace(/&lt;br\s*\/?&gt;/gi, '<br>')
-      // Restore <span class="highlight-blue">...</span>
-      .replace(/&lt;span class=&quot;highlight-blue&quot;&gt;([\s\S]*?)&lt;\/span&gt;/gi, '<span class="highlight-blue">$1</span>')
+      // Restore <span class="highlight-blue">...</span> - content must not contain HTML
+      .replace(/&lt;span class=&quot;highlight-blue&quot;&gt;([^<]*)&lt;\/span&gt;/gi, '<span class="highlight-blue">$1</span>')
       // Restore <strong style="font-size: X.Xrem;">...</strong> with valid decimal number
-      .replace(/&lt;strong style=&quot;font-size:\s*(\d+(?:\.\d+)?)rem;&quot;&gt;([\s\S]*?)&lt;\/strong&gt;/gi, function(match, size, content) {
+      .replace(/&lt;strong style=&quot;font-size:\s*(\d+(?:\.\d+)?)rem;&quot;&gt;([^<]*)&lt;\/strong&gt;/gi, function(match, size, content) {
         // Validate that size is a reasonable number (0.1 to 10)
         const sizeNum = parseFloat(size);
         if (isNaN(sizeNum) || sizeNum < 0.1 || sizeNum > 10) {
