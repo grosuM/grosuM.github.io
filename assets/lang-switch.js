@@ -327,36 +327,45 @@
     updateLangButton();
   }
 
-  // Sanitize HTML content - only allow safe tags like <br>, <span>, <strong>
+  // Allowlisted HTML patterns that are safe to use in translations
+  // These are strictly controlled and only match specific patterns we use
+  const SAFE_PATTERNS = {
+    br: /<br\s*\/?>/gi,
+    spanHighlight: /<span class="highlight-blue">([^<]*)<\/span>/gi,
+    strongSize: /<strong style="font-size:\s*\d+(?:\.\d+)?rem;">([^<]*)<\/strong>/gi
+  };
+
+  // Sanitize HTML content using strict allowlist approach
   function sanitizeHtml(html) {
-    // Create a temporary element to parse the HTML
-    const temp = document.createElement('div');
-    temp.textContent = html;
-    let sanitized = temp.innerHTML;
+    // First, escape all HTML to prevent any injection
+    const escaped = html
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
     
-    // Only allow specific safe HTML tags by replacing escaped versions back
-    // Allow: <br>, <br/>, <span>, </span>, <strong>, </strong>
-    sanitized = sanitized
+    // Then, selectively restore only our known safe patterns
+    let result = escaped
+      // Restore <br> and <br/> tags
       .replace(/&lt;br\s*\/?&gt;/gi, '<br>')
-      .replace(/&lt;span([^&]*)&gt;/gi, function(match, attrs) {
-        // Only allow class attribute
-        const classMatch = attrs.match(/class=["']([^"']+)["']/i);
-        return classMatch ? '<span class="' + classMatch[1].replace(/[^a-zA-Z0-9_\-\s]/g, '') + '">' : '<span>';
-      })
-      .replace(/&lt;\/span&gt;/gi, '</span>')
-      .replace(/&lt;strong([^&]*)&gt;/gi, function(match, attrs) {
-        // Only allow style attribute with safe properties
-        const styleMatch = attrs.match(/style=["']([^"']+)["']/i);
-        if (styleMatch) {
-          // Only allow font-size property
-          const fontSizeMatch = styleMatch[1].match(/font-size:\s*[0-9.]+rem/i);
-          return fontSizeMatch ? '<strong style="' + fontSizeMatch[0] + '">' : '<strong>';
+      // Restore <span class="highlight-blue">...</span>
+      .replace(/&lt;span class=&quot;highlight-blue&quot;&gt;([\s\S]*?)&lt;\/span&gt;/gi, '<span class="highlight-blue">$1</span>')
+      // Restore <strong style="font-size: X.Xrem;">...</strong> with valid decimal number
+      .replace(/&lt;strong style=&quot;font-size:\s*(\d+(?:\.\d+)?)rem;&quot;&gt;([\s\S]*?)&lt;\/strong&gt;/gi, function(match, size, content) {
+        // Validate that size is a reasonable number (0.1 to 10)
+        const sizeNum = parseFloat(size);
+        if (isNaN(sizeNum) || sizeNum < 0.1 || sizeNum > 10) {
+          return '<strong>' + content + '</strong>';
         }
-        return '<strong>';
-      })
-      .replace(/&lt;\/strong&gt;/gi, '</strong>');
+        return '<strong style="font-size: ' + size + 'rem;">' + content + '</strong>';
+      });
     
-    return sanitized;
+    // Unescape quotes that were escaped but are not inside HTML tags
+    // This preserves the original text content
+    result = result.replace(/&quot;/g, '"').replace(/&#039;/g, "'");
+    
+    return result;
   }
 
   function updateContent() {
