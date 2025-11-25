@@ -339,24 +339,25 @@
     
     // Then, selectively restore only our known safe patterns
     // Using [^<]* to prevent nested HTML tags within restored elements
-    let result = escaped
+    var result = escaped
       // Restore <br> and <br/> tags
       .replace(/&lt;br\s*\/?&gt;/gi, '<br>')
       // Restore <span class="highlight-blue">...</span> - content must not contain HTML
       .replace(/&lt;span class=&quot;highlight-blue&quot;&gt;([^<]*)&lt;\/span&gt;/gi, '<span class="highlight-blue">$1</span>')
       // Restore <strong style="font-size: X.Xrem;">...</strong> with valid decimal number
-      .replace(/&lt;strong style=&quot;font-size:\s*(\d+(?:\.\d+)?)rem;&quot;&gt;([^<]*)&lt;\/strong&gt;/gi, function(match, size, content) {
+      // Allows optional space after colon but normalizes output to include the space
+      .replace(/&lt;strong style=&quot;font-size:\s?(\d+(?:\.\d+)?)rem;&quot;&gt;([^<]*)&lt;\/strong&gt;/gi, function(match, size, content) {
         // Validate that size is a reasonable number (0.1 to 10)
-        const sizeNum = parseFloat(size);
+        var sizeNum = parseFloat(size);
         if (isNaN(sizeNum) || sizeNum < 0.1 || sizeNum > 10) {
           return '<strong>' + content + '</strong>';
         }
         return '<strong style="font-size: ' + size + 'rem;">' + content + '</strong>';
       });
     
-    // Unescape quotes that were escaped but are not inside HTML tags
-    // This preserves the original text content
-    result = result.replace(/&quot;/g, '"').replace(/&#039;/g, "'");
+    // Note: We intentionally keep &quot; and &#039; escaped in the output
+    // to prevent any potential attribute injection. The escaped quotes
+    // will display correctly as " and ' in the rendered HTML text content.
     
     return result;
   }
