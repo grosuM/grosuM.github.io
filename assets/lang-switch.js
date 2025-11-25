@@ -327,6 +327,41 @@
     updateLangButton();
   }
 
+  // Sanitize HTML content using strict allowlist approach
+  function sanitizeHtml(html) {
+    // First, escape all HTML to prevent any injection
+    const escaped = html
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+    
+    // Then, selectively restore only our known safe patterns
+    // Using [^<]* to prevent nested HTML tags within restored elements
+    var result = escaped
+      // Restore <br> and <br/> tags
+      .replace(/&lt;br\s*\/?&gt;/gi, '<br>')
+      // Restore <span class="highlight-blue">...</span> - content must not contain HTML
+      .replace(/&lt;span class=&quot;highlight-blue&quot;&gt;([^<]*)&lt;\/span&gt;/gi, '<span class="highlight-blue">$1</span>')
+      // Restore <strong style="font-size: X.Xrem;">...</strong> with valid decimal number
+      // Allows optional space after colon but normalizes output to include the space
+      .replace(/&lt;strong style=&quot;font-size:\s?(\d+(?:\.\d+)?)rem;&quot;&gt;([^<]*)&lt;\/strong&gt;/gi, function(match, size, content) {
+        // Validate that size is a reasonable number (0.1 to 10)
+        var sizeNum = parseFloat(size);
+        if (isNaN(sizeNum) || sizeNum < 0.1 || sizeNum > 10) {
+          return '<strong>' + content + '</strong>';
+        }
+        return '<strong style="font-size: ' + size + 'rem;">' + content + '</strong>';
+      });
+    
+    // Note: We intentionally keep &quot; and &#039; escaped in the output
+    // to prevent any potential attribute injection. The escaped quotes
+    // will display correctly as " and ' in the rendered HTML text content.
+    
+    return result;
+  }
+
   function updateContent() {
     const t = translations[currentLang];
     
@@ -337,8 +372,14 @@
         if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
           el.placeholder = t[key];
         } else {
-          // Use innerHTML for elements that may contain HTML tags like <br>
-          el.innerHTML = t[key];
+          // Check if content contains HTML tags
+          if (/<[^>]+>/.test(t[key])) {
+            // Sanitize HTML content before inserting
+            el.innerHTML = sanitizeHtml(t[key]);
+          } else {
+            // Use textContent for plain text (safer, no XSS risk)
+            el.textContent = t[key];
+          }
         }
       }
     });
@@ -354,7 +395,8 @@
     const langBtn = document.getElementById('lang-toggle');
     if (langBtn) {
       const otherLang = currentLang === 'pl' ? 'en' : 'pl';
-      langBtn.innerHTML = `${flags[currentLang]} ${currentLang.toUpperCase()} / ${flags[otherLang]} ${otherLang.toUpperCase()}`;
+      // Use textContent for safety - no HTML parsing needed here
+      langBtn.textContent = flags[currentLang] + ' ' + currentLang.toUpperCase() + ' / ' + flags[otherLang] + ' ' + otherLang.toUpperCase();
     }
   }
 
