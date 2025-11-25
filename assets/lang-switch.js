@@ -327,6 +327,38 @@
     updateLangButton();
   }
 
+  // Sanitize HTML content - only allow safe tags like <br>, <span>, <strong>
+  function sanitizeHtml(html) {
+    // Create a temporary element to parse the HTML
+    const temp = document.createElement('div');
+    temp.textContent = html;
+    let sanitized = temp.innerHTML;
+    
+    // Only allow specific safe HTML tags by replacing escaped versions back
+    // Allow: <br>, <br/>, <span>, </span>, <strong>, </strong>
+    sanitized = sanitized
+      .replace(/&lt;br\s*\/?&gt;/gi, '<br>')
+      .replace(/&lt;span([^&]*)&gt;/gi, function(match, attrs) {
+        // Only allow class attribute
+        const classMatch = attrs.match(/class=["']([^"']+)["']/i);
+        return classMatch ? '<span class="' + classMatch[1].replace(/[^a-zA-Z0-9_\-\s]/g, '') + '">' : '<span>';
+      })
+      .replace(/&lt;\/span&gt;/gi, '</span>')
+      .replace(/&lt;strong([^&]*)&gt;/gi, function(match, attrs) {
+        // Only allow style attribute with safe properties
+        const styleMatch = attrs.match(/style=["']([^"']+)["']/i);
+        if (styleMatch) {
+          // Only allow font-size property
+          const fontSizeMatch = styleMatch[1].match(/font-size:\s*[0-9.]+rem/i);
+          return fontSizeMatch ? '<strong style="' + fontSizeMatch[0] + '">' : '<strong>';
+        }
+        return '<strong>';
+      })
+      .replace(/&lt;\/strong&gt;/gi, '</strong>');
+    
+    return sanitized;
+  }
+
   function updateContent() {
     const t = translations[currentLang];
     
@@ -337,8 +369,14 @@
         if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
           el.placeholder = t[key];
         } else {
-          // Use innerHTML for elements that may contain HTML tags like <br>
-          el.innerHTML = t[key];
+          // Check if content contains HTML tags
+          if (/<[^>]+>/.test(t[key])) {
+            // Sanitize HTML content before inserting
+            el.innerHTML = sanitizeHtml(t[key]);
+          } else {
+            // Use textContent for plain text (safer, no XSS risk)
+            el.textContent = t[key];
+          }
         }
       }
     });
@@ -354,7 +392,8 @@
     const langBtn = document.getElementById('lang-toggle');
     if (langBtn) {
       const otherLang = currentLang === 'pl' ? 'en' : 'pl';
-      langBtn.innerHTML = `${flags[currentLang]} ${currentLang.toUpperCase()} / ${flags[otherLang]} ${otherLang.toUpperCase()}`;
+      // Use textContent for safety - no HTML parsing needed here
+      langBtn.textContent = flags[currentLang] + ' ' + currentLang.toUpperCase() + ' / ' + flags[otherLang] + ' ' + otherLang.toUpperCase();
     }
   }
 
